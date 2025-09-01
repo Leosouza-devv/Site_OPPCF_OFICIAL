@@ -1,0 +1,376 @@
+/* (INICIO) estilizando o cabeçalho */
+header.cabecalho {
+    display: flex; /* Define layout flexível para organizar elementos */
+    width: 100%; /* Cabeçalho ocupa toda a largura */
+    position: fixed; /* Posição inicial sobre o conteúdo */
+    top: 0;
+    z-index: 1; /* Mantém o cabeçalho acima de outros elementos */
+    min-height: 10vh; /* Altura mínima do cabeçalho */
+    box-sizing: border-box; /* Inclui padding e border no cálculo */
+    flex-direction: column; /* Organiza os elementos em coluna */
+    transition: var(--transition-normal); /* Animações suaves nas mudanças */
+    box-shadow: var(--shadow-md); /* Sombra sutil */
+    background-color: var(--white);
+    color: var(--black);
+
+
+    /* -------------------------------------------------------- */
+    /* Área principal do cabeçalho */
+    & div.conteudo_cabecalho {
+        display: flex; 
+        justify-content: space-around; 
+        padding: 15px 20px;
+ 
+        transition: var(--transition-normal); 
+        
+    }
+
+    /* (INICIO) cabeçalho fixo */
+    &.cabecalho.cabecalho_fixo {
+
+        /* -------------------------------------------------------- */
+        & div.conteudo_cabecalho {
+            margin: 0;
+            padding: 0px 10px; /* Ajuste de espaçamento interno */
+
+        }
+
+        
+
+        & label {
+            & div.abrir::after,
+            & div.abrir::before {
+                background-color: var(--backgroundColorPadrao); /* Linha do menu hamburguer */
+            }
+        }
+    }
+}
+/* (FIM) cabeçalho fixo */
+
+
+/* -------------------------------------------------------- */
+/* (INICIO) estilizando a logo */
+div.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing-3);
+    
+    & h3{
+        color: var(--black);
+        font-size: 25px;
+        
+    }
+    
+    & img {
+        max-width: 100px;
+        width: 70px;
+        height: 70px; /* Altura da imagem da logo */
+        margin: 10px 0;
+    }
+}
+
+header.cabecalho_fixo {
+    & div.logo {
+        color: var(--colorButoonHover); /* Cor quando cabeçalho está fixo */
+    }
+}
+/* (FIM) logo */
+
+/* -------------------------------------------------------- */
+/* (INICIO) navegação desktop */
+nav.navegacao_desktop {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    max-width: 700px;
+    width: 700px;
+
+    & ul.desk_div {
+        width: 100%;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        gap: var(--spacing-6);
+        margin: 10px;
+        background-color: var(--gray-50);
+        border-radius: 25px;
+        box-shadow: var(--shadow-sm);
+
+    }
+
+    & ul li a {
+        padding: 10px;
+        margin: 10px;
+        font-size: 25px;
+        color: var(--black);
+        overflow: hidden;
+        position: relative;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: var(--spacing-1);
+        transition: ease-in-out .2s;
+        font-weight: var(--font-weight-normal);
+
+        
+
+        & span{
+            &::before {
+                content: "";
+                position: absolute;
+                height: 4px;
+                bottom: 8px;
+                top: 42px;
+                width: 10%;
+                width: 0;
+                background: var(--black);
+                transition: width var(--transition-fast);
+                
+            
+            }
+        }
+
+        &:hover {
+            transform: scale(1.04);
+
+            span{
+                &::before {
+                    width: 30%;
+                }
+            }
+        }
+    }
+}
+
+.cabecalho_fixo {
+    & div.conteudo_cabecalho {
+        & nav.navegacao_desktop ul li {
+            color: var(--black); /* Cor padrão do link em cabeçalho fixo */
+            &::before{
+                background-color: var(--black);
+            }
+            
+        }
+        & div#abrir  {
+            color: var(--black); /* Cor padrão do link em cabeçalho fixo */
+            &:hover {
+                color: var(--color_4);
+            }
+        }
+    }
+}
+
+
+
+
+/* (FIM) navegação desktop */
+
+/* -------------------------------------------------------- */
+/* (INICIO) navegação mobile */
+nav.menu_mobile {
+    display: none; /* Inicialmente escondido */
+    overflow: hidden;
+}
+
+div.mob_div ul li {
+    display: none;
+}
+
+input[id="menu-check"] {
+    display: none; /* Checkbox para abrir/fechar menu */
+}
+
+/* (INICIO) menu hamburguer */
+label {
+    z-index: 1;
+    position: absolute;
+    left: 80%;
+    display: none;
+}
+
+#abrir {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    font-size: 0px;
+    cursor: pointer;
+    display: none;
+    z-index: 999;
+    top: 5px;
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        right: 26%;
+        width: 60%;
+        height: 10%;
+        transition: transform 0.5s ease;
+        border-radius: 15px;
+        background-color: var(--black);
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 70%;
+        right: 26%;
+        width: 35%;
+        height: 10%;
+        transition: transform 0.5s ease, left 0.5s ease;
+        border-radius: 15px;
+        background-color: var(--black);
+        
+    }
+}
+
+.fechar#abrir {
+    &::after {
+        top: 70%;
+        width: 53%;
+        right: 26%;
+        transform: rotate(225deg);
+        background-color: var(--color_4);
+    }
+
+    &::before {
+        transform: rotate(495deg);
+        width: 53%;
+        right: 26%;
+        top: 70%;
+        background-color: var(--color_4);
+    }
+}
+
+header.cabecalho.cabecalho_fixo {
+    #abrir::after,
+    #abrir::before {
+        background-color: var(--black);
+    }
+}
+/* (FIM) menu hamburguer */
+
+/* -------------------------------------------------------- */
+/* (INICIO) menu mobile aberto */
+div.mob_a {
+    display: none;
+}
+
+main.invisivel {
+    & section,
+    & nav,
+    & div {
+        display: none; /* Oculta conteúdo principal quando menu mobile aberto */
+    }
+}
+
+nav.open {
+    width: 100%;
+    min-height: 100vh; /* Menu ocupa toda a tela */
+}
+
+div.a_none {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px 0 0 0;
+
+    & ul{
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    & ul li a {
+        padding: 10px;
+        margin: 10px;
+        font-size: 25px;
+        color: var(--black);
+        overflow: hidden;
+        position: relative;
+        cursor: pointer;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 5px;
+        transition: ease-in-out .2s;
+        font-weight: 400;
+        animation: ease calc(var(--a_mobile1) * .4s) mobile1;
+
+        & span{
+            &::before {
+                content: "";
+                position: absolute;
+                height: 4px;
+                bottom: 8px;
+                top: 42px;
+                width: 10%;
+                width: 0;
+                background-color: var(--black);
+                transition: width var(--transition-fast);
+                
+            
+            }
+        }
+
+        &:hover {
+            transform: translateX(6px);
+
+            span{
+                &::before {
+                    width: 20%;
+                }
+            }
+        }
+    }
+}
+
+@keyframes mobile1 {
+    0% {
+        transform: translateY(-300px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+/* (FIM) menu mobile aberto */
+
+/* -------------------------------------------------------- */
+/* (INICIO) responsividade mobile */
+@media (max-width: 900px) {
+    nav.menu_mobile {
+        display: block; /* Exibe menu hamburguer */
+    }
+
+    #abrir {
+        display: block;
+    }
+
+    label {
+        display: block;
+    }
+
+    nav.navegacao_desktop {
+        display: none; /* Oculta menu desktop */
+    }
+
+    nav.redes_sociais {
+        display: none; /* Oculta redes sociais */
+    }
+
+    header {
+        & div.conteudo_cabecalho {
+            width: 40%; /* Ajusta largura do conteúdo do cabeçalho */
+            
+        }
+    }
+}
+/* (FIM) responsividade mobile */
+/* (FIM) estilizando o cabeçalho */

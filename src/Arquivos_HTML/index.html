@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+
+    <!-- Scripts JavaScript -->
+    <script src="Scripts/botaoScrollTopo.js" defer></script>
+    <script src="Scripts/Cabecalho.js" defer></script>
+    <script src="Scripts/rodape.js" defer></script>
+    <script src="Scripts/cookies.js" defer></script>
+
+
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="CSS/variaveisCss.css">
+    <link rel="stylesheet" href="CSS/reset.css">
+    <link rel="stylesheet" href="CSS/cabecalho.css">
+    <link rel="stylesheet" href="CSS/rodape.css">
+    <link rel="stylesheet" href="CSS/ScrollTopo.css">
+    <link rel="stylesheet" href="CSS/paginaInicio.css">
+    <link rel="stylesheet" href="CSS/cookies.css">
+
+    <!-- Icones e fontes -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://kit.fontawesome.com/66e2119c78.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+</head>
+
+<body>
+    <!-- (INICIO)Cabeçalho do site-->
+    <header class="cabecalho">
+
+        <div class="conteudo_cabecalho">
+            <!--(INICIO) Logo do cabeçalho -->
+            <div class="logo">
+                <img src="img/Logo.svg" alt="Imagem da logo do Grupo de Pesquisa">
+                <h3>OPPCF</h3>
+            </div>
+            <!--(FIM) Logo do cabeçalho -->
+
+            <!--(INICIO) links de navegação do site pelo computador -->
+            <nav class="navegacao_desktop">
+                <ul class="desk_div">
+                    <li class="desk_a"><a href="#"> <img src="img/home (1) 1.svg"></img><span>Inicio</span></a></li>
+                    <li class="desk_a"> <a href="HTML/LinhasDePesquisa_Geral.html"> <img src="img/LinhaDePesquisa.svg">
+                            <Span>Linhas de pesquisa</Span> </a></li>
+                    <li class="desk_a"><a href="HTML/Eventos.html"><img src="img/Eventos.svg"><span>Eventos</span></a>
+                    </li>
+
+                </ul>
+
+
+
+            </nav>
+            <!--(FIM) links de navegação do site pelo computador -->
+
+
+            <!--(INICIO) menu hamburguer para celular -->
+            <input type="checkbox" id="menu-check">
+            <label class="lebel_hamburguer" for="menu-check">
+                <div id="abrir" onclick="menu();"></div>
+            </label>
+            <!--(FIM) menu hamburguer para celular -->
+
+            <!--(INICIO) tema escuro ou claro do site -->
+            <!--(FIM) tema escuro ou claro do site -->
+        </div>
+    </header>
+
+    <!--(INICIO) links de navegação do site pelo celular -->
+
+    <nav class="menu_mobile">
+
+        <div class="mob_a">
+
+
+            <ul class="desk_div">
+                <li class="desk_a" style="--a_mobile1: 3;"><a href="#"> <img
+                            src="img/home (1) 1.svg"></img><span>Inicio</span></a></li>
+                <li class="desk_a" style="--a_mobile1: 2.5;"> <a href="HTML/LinhasDePesquisa_Geral.html"> <img
+                            src="img/LinhaDePesquisa.svg"> <Span>Linhas de pesquisa</Span> </a></li>
+                <li class="desk_a" style="--a_mobile1: 2;"><a href="HTML/Eventos.html"><img
+                            src="img/Eventos.svg"><span>Eventos</span></a></li>
+
+            </ul>
+        </div>
+    </nav>
+
+    <!-- (FIM)links de navegação do site pelo celular -->
+
+    <!--(FIM) Cabeçalho do site-->
+
+    <!--(INICIO) Botão de scroll para topo da pagina -->
+
+    <div class="botaoTopo">
+        <div class="BT" onclick="scrolltopo()">
+            <ion-icon name="chevron-up-sharp"></ion-icon>
+        </div>
+    </div>
+
+    <!--(FIM) Botão de scroll para topo da pagina -->
+
+    <!--(INICIO) seção de informações do site -->
+    <main class="informacoes" id="informacoes">
+
+        <!--(INICIO) introdução -->
+        <section class="introducao">
+
+            <div class="txt">
+                <h1>OPPCF</h1>
+                <p>Observatório de Politicas Publicas do Centro-Sul Fluminense</p>
+            </div>
+        </section>
+        <!--(FIM) introdução -->
+
+    </main>
+
+    <!--(INICIO) seção de informações do site -->
+
+
+    <!--(INICIO) rodapé do site -->
+    <footer class="rodape" id="rodape">
+        <section class="rodapeInformacoes">
+
+            <div class="rodapeInstitucional">
+                <h3>Institucional</h3>
+                <p><strong>Grupo de pesquisa:</strong> Observatório de Politicas Publicas do Centro-Sul Fluminense</p>
+                <p><strong>Instituição:</strong> Instituto Federal do Rio de Janeiro (IFRJ)</p>
+                <p><strong>Cordenação:</strong> Rodrigo dos Santos Borges</p>
+            </div>
+
+            <div class="rodapeSuporte">
+                <h3>Suporte</h3>
+                <a href="HTML/PoliticasDePrivacidade.html">Politicas de Privacidade</a>
+                <a href="HTML/TermoDeUsoEticoDaIA.html">Termo de uso ético de Inteligencia Artificial - IA</a>
+                <a href="HTML/FaleConosco.html">Fale conosco</a>
+            </div>
+
+            <div class="rodapeFinanciamentoApoio">
+                <h3>Financiamento e apoio</h3>
+                <div>
+                    <img src="img/logo-instituto.svg" alt="Logo do Instituto Federal do Rio de Janeiro, IFRJ.">
+                    <img src="img/logo_faperj.svg"
+                        alt="Logo da Fundação de Amparo à Pesquisa do Estado do Rio de Janeiro, FAPERJ.">
+                    <img src="img/cnpq-logo.svg"
+                        alt="Logo do Conselho Nacional de Desenvolvimento Científico e Tecnológico, CNPq.">
+                </div>
+            </div>
+        </section>
+
+        <section class="rodapeCopy">
+
+            <div>
+                <div class="copy">
+
+                    <p>&copy; <span id="dateCopy"></span> OPPCF - Todos os direitos reservados. </p>
+
+                </div>
+
+                <div class="rodapeRedes">
+
+                    <P>Siga-nos na web </P>
+                    <nav class="rodape_redes_sociais">
+                        <a href="" class="a_redes">
+                            <i class="fa-brands fa-facebook"></i>
+                        </a>
+                        <a href="" class="a_redes">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="" class="a_redes">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+
+                    </nav>
+
+                </div>
+            </div>
+
+        </section>
+    </footer>
+    <!--(FIM) rodapé do site -->
+
+
+
+
+
+
+    <!-- Cookie Banner -->
+    <section id="cookies"></section>
+
+
+
+</body>
+
+</html>

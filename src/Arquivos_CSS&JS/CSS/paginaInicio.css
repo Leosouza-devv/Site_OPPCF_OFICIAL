@@ -1,0 +1,103 @@
+    /*(INICIO) da estilização da Sessão De informações (PAGINA INICIAL)*/
+
+    /*(INICIO) estilização geral da section */
+
+    main.informacoes {
+        display: block;
+        overflow: hidden;
+    }
+
+    /*(FIM) estilização geral da section */
+
+    /* (INICIO)estilização da introdução da pagina inicial */
+    section.introducao {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: var(--sobre-posicao), url("../img/foto\ da\ ponte\ de\ ftontin\ -\ vale\ do\ café.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        padding-top: 15vh;
+        min-height: 100vh;
+        position: relative;
+        overflow: hidden;
+    }
+
+    section.introducao div.txt {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: var(--white);
+        margin: 0 20px 0 20px;
+        text-align: center;
+
+    }
+
+    section.introducao div.txt h1 {
+        font-size: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        animation: ease 1.2s animação_h1_introdução;
+        animation-delay: 0s;
+
+    }
+
+    @keyframes animação_h1_introdução {
+        0% {
+            transform: translateY(-500px);
+        }
+
+        100% {
+            transform: translateY(0);
+        }
+    }
+
+    section.introducao div.txt p {
+        font-size: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        animation: ease 1.2s animação_p_introdução;
+        animation-delay: 0s;
+    }
+
+    @keyframes animação_p_introdução {
+        0% {
+            transform: translateY(500px);
+        }
+
+        100% {
+            transform: translateY(0);
+        }
+    }
+
+
+
+    /* (FIM)estilização da introdução da pagina inicial */
+
+
+
+    /* Responsividade */
+    @media (max-width:800px) {
+
+        section.introducao div.txt h1 {
+
+            transform: scale(0.8);
+        }
+
+
+        section.introducao div.txt p {
+            transform: scale(0.8);
+        }
+
+
+    }
+
+
+
+    /*(FIM) estilização da Sessão De informações (PAGINA INICIAL)*/

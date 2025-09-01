@@ -1,0 +1,78 @@
+ .Politicas_termoDeUso {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+        }
+        
+        .txt_Politicas_termoDeUso {
+            line-height: 1.6;
+            color: #333;
+
+            & p {
+                margin-bottom: 15px;
+                text-align: justify;
+                font-size: var(--font-size-xs);
+            }
+
+            p.UsoResponsavelDaIA{
+                color: var(--gray-500); 
+                font-style: italic;
+            }
+
+            p.Atualizacao{
+                color: var(--gray-500); 
+            }
+
+            & b {
+                color: var(--color_5);
+
+            }
+        }
+        
+        h2.topico {
+            color: #2c3e50;
+            font-size: 24px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            border-left: 4px solid var(--color_4);
+            padding-left: 15px;
+        }
+        
+        h3.sub_topico {
+            color: #34495e;
+            font-size: 18px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        
+        ul.lista_Politicas_termoDeUso {
+            margin: 15px 0;
+            padding-left: 20px;
+            list-style:"◾";
+
+            & li.itemLista_TermoDeUso {
+                margin-bottom: 8px;
+                line-height: 1.5;
+            }
+        
+        }
+        
+        
+        .linhaDeseparacaoDeTopicos {
+            height: 2px;
+            background: linear-gradient(to right, #e74c3c, transparent);
+            margin: 30px 0;
+            border-radius: 1px;
+        }
+        
+
+        .destaque-etico {
+            background: linear-gradient(135deg, #ffeaa7, #fab1a0);
+            border-left: 4px solid #e17055;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+            font-style: italic;
+        }

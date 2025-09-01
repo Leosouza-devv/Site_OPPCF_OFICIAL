@@ -1,0 +1,96 @@
+  :root {
+    /* === Paleta de cores principal === */
+    --color_1: #28292A;
+    /*Cor utilizada para Background que possui letras brancas */
+    --color_2: #44474a;
+    /*Cor utilizada para Background que possui elementos um pouco mais escuros que branco*/
+    --color_3: #EFF4F9;
+    /*Cor optativa para utilizar em letras ou elementos no fundo escuro */
+    --color_4: #3f96d4;
+    /*Cor utilizada para elementos:hover ou links:hover*/
+    --color_5: #007295;
+    /*... a definir*/
+    --color_6: #2AE57E;
+    /*... a definir*/
+
+    --primary-gradient: linear-gradient(135deg, var(--color_6) 0%, var(--color_4) 100%);
+
+
+    /* === Escala de cinzas ==== */
+    --white: #ffffff;
+    --gray-50: #feffff;
+    --gray-75: #f0f2f4;
+    --gray-100: #f3f4f6;
+    --gray-200: #e5e7eb;
+    --gray-300: #d1d5db;
+    --gray-400: #9ca3af;
+    --gray-500: #6b7280;
+    --gray-600: #4b5563;
+    --gray-700: #374151;
+    --gray-800: #1f2937;
+    --gray-900: #111827;
+    --black: #000;
+
+    /* === SOMBRAS E BORDAS === */
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 23, 0.05);
+    --shadow-md: 0 2px 4px -1px rgba(0, 0, 23, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 23, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --shadow-box: 0 1px 5px 0 rgba(0, 0, 23, 0.1);
+
+    --border-radius: 0.5rem;
+    /* 8px */
+    --border-radius-lg: 0.75rem;
+    /* 12px */
+    --border-radius-full: 9999px;
+
+    /* Sobre posição de imagens */
+
+    --sobre-posicao: linear-gradient(rgba(0, 0, 0, 0.647), rgba(0, 14, 25, 0.775));
+
+    /* === Pesos da fonte === */
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+
+    /* === TIPOGRAFIA PROFISSIONAL === */
+    --font-size-xs: 0.75rem;
+    /* 12px */
+    --font-size-sm: 0.875rem;
+    /* 14px */
+    --font-size-base: 1rem;
+    /* 16px */
+    --font-size-lg: 1.125rem;
+    /* 18px */
+    --font-size-xl: 1.25rem;
+    /* 20px */
+    --font-size-2xl: 1.5rem;
+    /* 24px */
+
+    /* === TRANSIÇÕES SUAVES === */
+    --transition-fast: 150ms ease-in-out;
+    --transition-normal: 200ms ease-in-out;
+
+    /* === ESPAÇAMENTOS === */
+    --spacing-1: 0.25rem;
+    /* 4px */
+    --spacing-2: 0.5rem;
+    /* 8px */
+    --spacing-3: 0.75rem;
+    /* 12px */
+    --spacing-4: 1rem;
+    /* 16px */
+    --spacing-5: 1.25rem;
+    /* 20px */
+    --spacing-6: 1.5rem;
+    /* 24px */
+    --spacing-8: 2rem;
+    /* 32px */
+    --spacing-10: 2.5rem;
+    /* 40px */
+    --spacing-12: 3rem;
+    /* 48px */
+    --spacing-16: 4rem;
+    /* 64px */
+
+  }

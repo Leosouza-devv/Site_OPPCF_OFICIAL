@@ -1,0 +1,475 @@
+/* ===========================================
+   CONTAINER PRINCIPAL DO RODAPÉ
+=========================================== */
+.rodape {
+    /* Background limpo e profissional */
+    background-color: var(--gray-50);
+
+    /* Borda superior sutil para separação */
+    border-top: 1px solid var(--gray-100);
+    box-shadow: var(--shadow-box);
+
+    /* Tipografia base */
+    font-size: var(--font-size-base);
+    line-height: 1.6;
+    color: var(--gray-700);
+
+    /* Espaçamento generoso e profissional */
+    padding: var(--spacing-12) 0 0 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+
+
+}
+
+/* ===========================================
+   CONTAINER PRINCIPAL DO RODAPÉ QUANDO ABRE O MENU HAMBURGUER
+=========================================== */
+
+.rodape.rodape_none {
+    display: none;
+}
+
+/* ===========================================
+   LAYOUT PRINCIPAL - GRID RESPONSIVO
+=========================================== */
+.rodapeInformacoes {
+    /* Container centralizado */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-6);
+
+    /* Grid responsivo profissional */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(0px, 1fr));
+    gap: var(--spacing-1);
+    align-items: start;
+
+    /* Espaçamento inferior */
+    margin-bottom: var(--spacing-12);
+}
+
+
+
+/* ===========================================
+   TÍTULOS DAS SEÇÕES
+=========================================== */
+
+/* Aplicação do título às seções */
+.rodapeInstitucional h3,
+.rodapeSuporte h3,
+.rodapeFinanciamentoApoio h3 {
+    /* Herda estilos do section-title */
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--gray-800);
+    margin-bottom: var(--spacing-6);
+    position: relative;
+    padding-bottom: var(--spacing-2);
+}
+
+.rodapeInstitucional h3::after,
+.rodapeSuporte h3::after,
+.rodapeFinanciamentoApoio h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 5px;
+    background: var(--black);
+}
+
+/* ===========================================
+   SEÇÃO INSTITUCIONAL
+=========================================== */
+.rodapeInstitucional {
+    /* Layout limpo */
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-4);
+}
+
+.rodapeInstitucional p {
+    /* Tipografia otimizada para leitura */
+    font-size: var(--font-size-base);
+    line-height: 1.7;
+    color: var(--gray-600);
+    margin-bottom: var(--spacing-4);
+}
+
+.rodapeInstitucional p:last-child {
+    margin-bottom: 0;
+}
+
+/* Destaque para textos importantes */
+.rodapeInstitucional strong {
+    color: var(--gray-800);
+    font-weight: var(--font-weight-semibold);
+}
+
+/* ===========================================
+   SEÇÃO DE SUPORTE - LINKS
+=========================================== */
+.rodapeSuporte {
+    /* Layout vertical limpo */
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-2);
+}
+
+.rodapeSuporte a {
+    /* Estilo base profissional do link */
+    color: var(--gray-600);
+    text-decoration: none;
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-medium);
+
+    /* Layout e espaçamento */
+    display: block;
+    padding: var(--spacing-3) var(--spacing-4);
+    border-radius: var(--border-radius);
+
+    /* Transições suaves */
+    transition: var(--transition-normal);
+
+    /* Borda invisível para manter layout */
+    border: 1px solid transparent;
+}
+
+/* Estado hover profissional */
+.rodapeSuporte a:hover {
+    color: var(--color_3);
+    background-color: var(--color_1);
+    border-color: var(--gray-100);
+    transform: translateX(15px);
+}
+
+/* Estado de foco para acessibilidade */
+.rodapeSuporte a:focus {
+    outline: 2px solid var(--color_4);
+    outline-offset: 2px;
+}
+
+/* ===========================================
+   SEÇÃO DE FINANCIAMENTO E APOIO
+=========================================== */
+.rodapeFinanciamentoApoio {
+    /* Layout vertical */
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-6);
+
+    & div {
+        display: flex;
+        flex-wrap: wrap;
+        min-width: 100%;
+
+        gap: var(--spacing-5);
+
+        & img {
+            /* Tamanho profissional dos logos */
+            max-width: 200px;
+            max-height: 200px;
+            height: auto;
+            width: 200px;
+            padding: var(--spacing-1);
+
+        }
+    }
+
+}
+
+
+
+
+
+/* ===========================================
+   SEÇÃO COPYRIGHT
+=========================================== */
+.rodapeCopy {
+    /* Separação visual limpa */
+    border-top: .5px solid var(--gray-200);
+    background-color: var(--color_1);
+    padding: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+
+}
+
+/* Container interno centralizado */
+.rodapeCopy>div {
+    width: 100%;
+    max-width: 1200px;
+    padding: 5px var(--spacing-6);
+    margin: 0 auto;
+    /* Layout flexível responsivo */
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: var(--spacing-2);
+}
+
+/* Texto de copyright */
+.copy p {
+    margin: 0;
+    font-size: var(--font-size-sm);
+    color: var(--white);
+    font-weight: var(--font-weight-medium);
+}
+
+/* ===========================================
+   REDES SOCIAIS
+=========================================== */
+.rodapeRedes {
+    /* Layout horizontal limpo */
+    display: flex;
+    align-items: start;
+    gap: var(--spacing-6);
+    flex-wrap: wrap;
+}
+
+.rodapeRedes p {
+    margin: 0;
+    font-size: var(--font-size-sm);
+    color: var(--white);
+    font-weight: var(--font-weight-medium);
+
+}
+
+/* Container dos ícones sociais */
+.rodape_redes_sociais {
+    display: flex;
+
+    gap: var(--spacing-3);
+}
+
+/* Botões das redes sociais */
+.a_redes {
+    /* Layout e dimensões profissionais */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+
+    /* Estilo visual limpo */
+    background: var(--white);
+    border-radius: 50%;
+
+    /* Tipografia */
+    color: var(--color_1);
+    font-size: 30px;
+    text-decoration: none;
+
+    /* Transições profissionais */
+    transition: var(--transition-fast);
+    box-shadow: var(--shadow-sm);
+}
+
+/* Estados hover profissionais */
+.a_redes:hover {
+    background: var(--color_4);
+    color: var(--white);
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+/* Estados de foco */
+.a_redes:focus {
+    outline-offset: 2px;
+}
+
+/* ===========================================
+   RESPONSIVIDADE PROFISSIONAL
+=========================================== */
+
+/* Tablets - 768px e acima */
+@media (min-width: 768px) {
+    .rodapeInformacoes {
+        grid-template-columns: repeat(1, 1fr);
+        gap: var(--spacing-5);
+    }
+
+
+}
+
+/* Desktop - 1024px e acima */
+@media (min-width: 1024px) {
+    .rodape {
+        padding: var(--spacing-12) 0 0 0;
+    }
+
+    .rodapeInformacoes {
+        grid-template-columns: 2fr 2fr 1fr;
+        gap: var(--spacing-16);
+    }
+
+
+
+    /* Ajuste do layout dos financiadores */
+    .rodapeFinanciamentoApoio> :last-child {
+        justify-content: flex-start;
+    }
+}
+
+/* Mobile - ajustes para telas pequenas */
+@media (max-width: 767px) {
+    .rodape {
+        padding: var(--spacing-12) 0 0 0;
+    }
+
+    .rodapeInformacoes {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-8);
+    }
+
+    /* Centralização dos elementos no mobile */
+    .rodapeInstitucional h3::after,
+    .rodapeSuporte h3::after,
+    .rodapeFinanciamentoApoio h3::after {
+        left: 25px;
+        transform: translateX(-50%);
+    }
+
+    /* Layout do copyright em coluna no mobile */
+
+    .rodapeCopy {
+        gap: var(--spacing-2);
+    }
+
+    .rodapeCopy>div {
+        flex-direction: column;
+        gap: var(--spacing-2);
+    }
+
+    /* Ajuste das redes sociais */
+    .rodapeRedes {
+        flex-direction: column;
+        align-items: start;
+        gap: var(--spacing-3);
+    }
+
+
+}
+
+/* Mobile pequeno - 480px e abaixo */
+@media (max-width: 480px) {
+    .rodape {
+        padding: var(--spacing-10) 0 0 0;
+    }
+
+    .rodapeInformacoes {
+        padding: 0 var(--spacing-4);
+        gap: var(--spacing-6);
+    }
+
+    .rodapeCopy>div {
+        padding: 0px var(--spacing-4);
+    }
+
+    /* Ajuste dos botões sociais */
+    .a_redes {
+        width: 40px;
+        height: 40px;
+        font-size: var(--font-size-base);
+    }
+
+    /* Títulos menores */
+    .rodapeInstitucional h3,
+    .rodapeSuporte h3,
+    .rodapeFinanciamentoApoio h3 {
+        font-size: var(--font-size-lg);
+    }
+}
+
+/* ===========================================
+   ACESSIBILIDADE
+=========================================== */
+
+/* Respeito às preferências de movimento reduzido */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Alto contraste */
+@media (prefers-contrast: high) {
+    :root {
+        --gray-600: #000000;
+        --gray-700: #000000;
+    }
+
+    .rodapeLogo,
+    .a_redes {
+        border-width: 2px;
+    }
+}
+
+/* Estados de foco melhorados */
+*:focus-visible {
+    outline: 2px solid var(--color_4);
+    outline-offset: 2px;
+}
+
+/* ===========================================
+   OTIMIZAÇÕES PARA IMPRESSÃO
+=========================================== */
+@media print {
+    .rodape {
+        background: white !important;
+        color: black !important;
+        box-shadow: none;
+        border-top: 1px solid black;
+    }
+
+    /* Ocultar redes sociais na impressão */
+    .rodapeRedes {
+        display: none;
+    }
+
+    /* Layout simplificado para impressão */
+    .rodapeInformacoes {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--spacing-8);
+    }
+
+    .rodapeLogo {
+        grid-column: span 2;
+    }
+
+    /* Garantir contraste na impressão */
+    .rodapeInstitucional h3,
+    .rodapeSuporte h3,
+    .rodapeFinanciamentoApoio h3 {
+        color: black !important;
+    }
+
+    .rodapeInstitucional h3::after,
+    .rodapeSuporte h3::after,
+    .rodapeFinanciamentoApoio h3::after {
+        background: black !important;
+    }
+}
+
+/* ===========================================
+   MELHORIAS DE PERFORMANCE
+=========================================== */
+
+/* Otimização de fontes */
+.rodape {
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Contenção para melhor performance */
+.rodape {
+    contain: layout style;
+}

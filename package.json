@@ -1,0 +1,29 @@
+{
+  "name": "site_oppcf_oficial",
+  "version": "1.0.0",
+  "description": "Site oficial do grupo de pesquisa OPPCF",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "keywords": [
+    "Grupo",
+    "de",
+    "pesquisa",
+    "OPPCF",
+    "Pesquisa",
+    "cientifica",
+    "Politicas",
+    "Publicas"
+  ],
+  "author": "Leonardo Soares de Souza",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}

@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linhas de pesquisa</title>
+
+    <!-- Scripts JavaScript -->
+    <script src="../Scripts/botaoScrollTopo.js" defer></script>
+    <script src="../Scripts/Cabecalho.js" defer></script>
+    <script src="../Scripts/rodape.js" defer></script>
+    <script src="../Scripts/cookies.js" defer></script>
+
+
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="../Style CSS/variaveisCss.css">
+    <link rel="stylesheet" href="../Style CSS/reset.css">
+    <link rel="stylesheet" href="../Style CSS/cabecalho.css">
+    <link rel="stylesheet" href="../Style CSS/rodape.css">
+    <link rel="stylesheet" href="../Style CSS/ScrollTopo.css">
+    <link rel="stylesheet" href="../Style CSS/CabecalhoDoCorpoDoConteudo.css">
+    <link rel="stylesheet" href="../Style CSS/Cards_TXT+IMG.css">
+    <link rel="stylesheet" href="../Style CSS/cookies.css">
+
+    <!-- Icones e fontes -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://kit.fontawesome.com/66e2119c78.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+</head>
+
+<body>
+    <!-- (INICIO)Cabeçalho do site-->
+    <header class="cabecalho">
+        <div class="conteudo_cabecalho">
+            <!--(INICIO) Logo do cabeçalho -->
+            <div class="logo">
+                <img src="../img/Logo.svg" alt="Imagem da logo do Grupo de Pesquisa">
+                <h3>OPPCF</h3>
+            </div>
+            <!--(FIM) Logo do cabeçalho -->
+
+            <!--(INICIO) links de navegação do site pelo computador -->
+            <nav class="navegacao_desktop">
+                <ul class="desk_div">
+                    <li class="desk_a"><a href="../index.html"> <img
+                                src="../img/home (1) 1.svg"></img><span>Inicio</span></a></li>
+                    <li class="desk_a"> <a href="#"> <img src="../img/LinhaDePesquisa.svg"> <Span>Linhas de
+                                pesquisa</Span> </a></li>
+                    <li class="desk_a"><a href="../HTML/Eventos.html"><img
+                                src="../img/Eventos.svg"><span>Eventos</span></a></li>
+
+                </ul>
+
+
+
+            </nav>
+            <!--(FIM) links de navegação do site pelo computador -->
+
+
+            <!--(INICIO) menu hamburguer para celular -->
+            <input type="checkbox" id="menu-check">
+            <label class="lebel_hamburguer" for="menu-check">
+                <div id="abrir" onclick="menu();"></div>
+            </label>
+            <!--(FIM) menu hamburguer para celular -->
+
+            <!--(INICIO) tema escuro ou claro do site -->
+            <!--(FIM) tema escuro ou claro do site -->
+        </div>
+    </header>
+
+    <!--(INICIO) links de navegação do site pelo celular -->
+
+    <nav class="menu_mobile">
+
+        <div class="mob_a">
+
+
+            <ul class="desk_div">
+                <li class="desk_a" style="--a_mobile1: 3;"><a href="../index.html"> <img
+                            src="../img/home (1) 1.svg"></img><span>Inicio</span></a></li>
+                <li class="desk_a" style="--a_mobile1: 2.5;"> <a href="#"> <img src="../img/LinhaDePesquisa.svg">
+                        <Span>Linhas de pesquisa</Span> </a></li>
+                <li class="desk_a" style="--a_mobile1: 2;"><a href="../HTML/Eventos.html"><img
+                            src="../img/Eventos.svg"><span>Eventos</span></a></li>
+
+            </ul>
+        </div>
+    </nav>
+
+    <!-- (FIM)links de navegação do site pelo celular -->
+
+    <!--(FIM) Cabeçalho do site-->
+
+    <!--(INICIO) Botão de scroll para topo da pagina -->
+
+    <div class="botaoTopo">
+        <div class="BT" onclick="scrolltopo()">
+            <ion-icon name="chevron-up-sharp"></ion-icon>
+        </div>
+    </div>
+
+    <!--(FIM) Botão de scroll para topo da pagina -->
+
+    <!--(INICIO) Corpo do conteudo do site -->
+    <main class="conteudo" id="informacoes">
+        <!-- Cabeçalho do corpo do conteudo -->
+        <header class="CabecalhoDoCorpoDoConteudo">
+            <div class="CabecalhoDaPaginaPresente">
+                <h1>Linhas de Pesquisa</h1>
+                <div class="iconeDoCabecalhoDaPagina">
+                    <img src="../img/LinhaDePesquisa.svg" alt="Icone relacionado as linhas de pesquisa">
+                </div>
+            </div>
+            <div class="CaminhoPercorrido">
+                <p>
+                    <a href="">Inicio</a>
+                    /
+                    <a href="">Linhas de Pesquisa</a>
+                </p>
+            </div>
+        </header>
+        <!-- --------------------------------------------------------------------------------------------------- -->
+
+        <!-- === Cards + Imagem - Cards das linhas de pesquisa existentes === -->
+        <section class="container">
+
+            <div class="research-line fade-in">
+                <div class="content">
+                    <h2>Observatório de direitos sociais da população do Centro-Sul Fluminense</h2>
+                    <div class="tags">
+                        <span class="tag">Direitos Sociais</span>
+                        <span class="tag">Política Pública</span>
+                        <span class="tag">Observatório</span>
+                    </div>
+                    <div class="description">
+                        Esta linha de pesquisa dedica-se ao estudo e monitoramento dos direitos sociais fundamentais da população da região Centro-Sul Fluminense, abrangendo áreas como saúde, educação, habitação, trabalho e seguridade social, com foco na análise de políticas públicas e indicadores sociais.
+                    </div>
+                    <a href="#" class="saiba-mais">
+                        <span>Saiba mais</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="image-placeholder"></div>
+            </div>
+
+            <div class="research-line fade-in">
+                <div class="content">
+                    <h2>Laboratório de políticas institucionais do IFRJ-CEPF</h2>
+                    <div class="tags">
+                        <span class="tag">Políticas</span>
+                        <span class="tag">Institucional</span>
+                        <span class="tag">Gestão</span>
+                    </div>
+                    <div class="description">
+                        Laboratório especializado na análise, desenvolvimento e implementação de políticas institucionais no âmbito do IFRJ Campus Pinheiral, focando em processos de gestão educacional, desenvolvimento organizacional e inovação em políticas públicas educacionais.
+                    </div>
+                    <a href="#" class="saiba-mais" onclick="showMore(this)">
+                        <span>Saiba mais</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="image-placeholder"></div>
+            </div>
+
+            <div class="research-line fade-in">
+                <div class="content">
+                    <h2>Cultura Maker e Educação</h2>
+                    <div class="tags">
+                        <span class="tag">Maker</span>
+                        <span class="tag">Inovação</span>
+                        <span class="tag">STEAM</span>
+                    </div>
+                    <div class="description">
+                        Pesquisa voltada para a integração da cultura maker nos processos educacionais, explorando metodologias ativas, fabricação digital, prototipagem e desenvolvimento de projetos interdisciplinares que promovam a aprendizagem criativa e colaborativa.
+                    </div>
+                    <a href="#" class="saiba-mais" onclick="showMore(this)">
+                        <span>Saiba mais</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="image-placeholder"></div>
+            </div>
+
+            <div class="research-line fade-in">
+                <div class="content">
+                    <h2>Literatura e Sociedade: implicações teórico-práticas</h2>
+                    <div class="tags">
+                        <span class="tag">Literatura</span>
+                        <span class="tag">Sociedade</span>
+                        <span class="tag">Crítica</span>
+                    </div>
+                    <div class="description">
+                        Linha de pesquisa dedicada ao estudo das relações entre literatura e sociedade, analisando como as obras literárias refletem, influenciam e transformam contextos socioculturais, com ênfase nas implicações teóricas e práticas da crítica literária contemporânea.
+                    </div>
+                    <a href="#" class="saiba-mais" onclick="showMore(this)">
+                        <span>Saiba mais</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="image-placeholder"></div>
+            </div>
+
+
+        </section>
+
+    </main>
+
+
+    <!--(INICIO) Corpo do conteudo do site -->
+
+
+    <!--(INICIO) rodapé do site -->
+    <footer class="rodape" id="rodape">
+        <section class="rodapeInformacoes">
+
+            <div class="rodapeInstitucional">
+                <h3>Institucional</h3>
+                <p><strong>Grupo de pesquisa:</strong> Observatório de Politicas Publicas do Centro-Sul Fluminense</p>
+                <p><strong>Instituição:</strong> Instituto Federal do Rio de Janeiro (IFRJ)</p>
+                <p><strong>Cordenação:</strong> Rodrigo dos Santos Borges</p>
+            </div>
+
+            <div class="rodapeSuporte">
+                <h3>Suporte</h3>
+                <a href="../HTML/PoliticasDePrivacidade.html">Politicas de Privacidade</a>
+                <a href="../HTML/TermoDeUsoEticoDaIA.html">Termo de uso ético de Inteligencia Artificial - IA</a>
+                <a href="../HTML/FaleConosco.html">Fale conosco</a>
+            </div>
+
+            <div class="rodapeFinanciamentoApoio">
+                <h3>Financiamento e apoio</h3>
+                <div>
+                    <img src="../img/logo-instituto.svg" alt="Logo do Instituto Federal do Rio de Janeiro, IFRJ.">
+                    <img src="../img/logo_faperj.svg"
+                        alt="Logo da Fundação de Amparo à Pesquisa do Estado do Rio de Janeiro, FAPERJ.">
+                    <img src="../img/cnpq-logo.svg"
+                        alt="Logo do Conselho Nacional de Desenvolvimento Científico e Tecnológico, CNPq.">
+                </div>
+            </div>
+        </section>
+
+        <section class="rodapeCopy">
+
+            <div>
+                <div class="copy">
+
+                    <p>&copy; <span id="dateCopy"></span> OPPCF - Todos os direitos reservados. </p>
+
+                </div>
+
+                <div class="rodapeRedes">
+
+                    <P>Siga-nos na web </P>
+                    <nav class="rodape_redes_sociais">
+                        <a href="" class="a_redes">
+                            <i class="fa-brands fa-facebook"></i>
+                        </a>
+                        <a href="" class="a_redes">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="" class="a_redes">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+
+                    </nav>
+
+                </div>
+            </div>
+
+        </section>
+    </footer>
+    <!--(FIM) rodapé do site -->
+
+
+    <!-- Cookie Banner -->
+    <section id="cookies"></section>
+
+</body>
+
+</html>
