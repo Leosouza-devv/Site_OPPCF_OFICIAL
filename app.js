@@ -6,7 +6,6 @@ const connection = require('./db');  // Importar a conexão com o banco de dados
 const app = express();
 
 // permite que arquivos com funções estaticas funcionem ao mesmo tempo que o node.js
-app.use(express.static('public/Arquivos_CSS&JS'));
 app.use(express.static('public'));
 
 //(INICIO) Rotas para as paginas HTML
@@ -14,6 +13,9 @@ app.use(express.static('public'));
 // Rota para pagina Inicio/index 
 app.get('/', (req, res) => {
   res.sendFile(__dirname + '/public/HTML/index.html'); // Vai servir o arquivo HTML
+});
+app.get('/Eventos.html', (req, res) => {
+  res.sendFile(__dirname + '/public/HTML/Eventos.html'); // Vai servir o arquivo HTML
 });
 
 
