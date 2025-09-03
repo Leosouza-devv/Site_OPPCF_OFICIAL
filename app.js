@@ -14,10 +14,10 @@ app.use(express.static('public'));
 app.get('/', (req, res) => {
   res.sendFile(__dirname + '/public/HTML/index.html'); // Vai servir o arquivo HTML
 });
-app.get('/Eventos.html', (req, res) => {
-  res.sendFile(__dirname + '/public/HTML/Eventos.html'); // Vai servir o arquivo HTML
-});
 
+app.get('/LinhasDePesquisa_Geral.html/', (req, res) => {
+  res.sendFile(__dirname + '/public/HTML/LinhasDePesquisa_Geral.html'); // Vai servir o arquivo HTML
+});
 
 
 //(FIM) Rotas para as paginas HTML
