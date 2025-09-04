@@ -1,1 +1,8 @@
-node_modules
+# .gitignore
+node_modules/
+.env
+.DS_Store
+*.log
+dist/
+.vercel
+.netlify
