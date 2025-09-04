@@ -14,7 +14,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        background: var(--sobre-posicao), url("../img/foto\ da\ ponte\ de\ ftontin\ -\ vale\ do\ café.png");
+        background: var(--sobre-posicao), url("../../img/foto\ da\ ponte\ de\ ftontin\ -\ vale\ do\ café.png");
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
