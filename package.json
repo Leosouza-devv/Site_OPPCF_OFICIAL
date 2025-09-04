@@ -1,14 +1,17 @@
+
 {
   "name": "site_oppcf_oficial",
   "version": "1.0.0",
   "description": "Site oficial do grupo de pesquisa OPPCF",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app.js",
-    "dev": "nodemon app.js"
+    "dev": "nodemon app.js",
+    "build": "echo 'Build completed'",
+    "vercel-build": "echo 'Vercel build completed'"
   },
   "keywords": [
+  
     "Grupo",
     "de",
     "pesquisa",
@@ -17,15 +20,19 @@
     "cientifica",
     "Politicas",
     "Publicas"
+  
   ],
   "author": "Leonardo Soares de Souza",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
-    "express": "^5.1.0",
-    "fs": "^0.0.1-security",
-    "path": "^0.12.7"
+    "express": "^4.18.2",
+    "cors": "^2.8.5"
   },
   "devDependencies": {
-    "nodemon": "^3.1.10"
+    "nodemon": "^3.0.1"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
   }
 }

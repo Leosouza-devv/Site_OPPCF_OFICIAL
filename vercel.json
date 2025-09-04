@@ -8,6 +8,18 @@
   ],
   "routes": [
     {
+      "src": "/css/(.*)",
+      "dest": "/app.js"
+    },
+    {
+      "src": "/js/(.*)",
+      "dest": "/app.js"
+    },
+    {
+      "src": "/images/(.*)",
+      "dest": "/app.js"
+    },
+    {
       "src": "/api/(.*)",
       "dest": "/app.js"
     },
@@ -15,5 +27,10 @@
       "src": "/(.*)",
       "dest": "/app.js"
     }
-  ]
+  ],
+  "functions": {
+    "app.js": {
+      "includeFiles": "public/**"
+    }
+  }
 }
