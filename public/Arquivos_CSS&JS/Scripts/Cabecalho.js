@@ -9,6 +9,7 @@ function menu() {
     let menu_mobile = document.querySelector('.menu_mobile');
     let botaoMenu = document.getElementById('abrir');
     let rodape = document.getElementById('rodape');
+    
 
 
     if (menu_mobile.classList.contains('open')) {
@@ -17,7 +18,6 @@ function menu() {
         a_none.classList.remove('a_none')
         botaoMenu.classList.remove('fechar');
         rodape.classList.remove('rodape_none');
-
 
     }
     else {

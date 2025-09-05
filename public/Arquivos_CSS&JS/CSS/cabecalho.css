@@ -262,11 +262,9 @@ div.mob_a {
 }
 
 main.invisivel {
-    & section,
-    & nav,
-    & div {
-        display: none; /* Oculta conteúdo principal quando menu mobile aberto */
-    }
+    
+    display: none; /* Oculta conteúdo principal quando menu mobile aberto */
+    
 }
 
 nav.open {
