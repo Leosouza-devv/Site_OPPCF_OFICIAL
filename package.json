@@ -25,8 +25,10 @@
   "author": "Leonardo Soares de Souza",
   "license": "MIT",
   "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
     "express": "^4.18.2",
-    "cors": "^2.8.5"
+    "mysql2": "^3.11.3"
   },
   "devDependencies": {
     "nodemon": "^3.0.1"

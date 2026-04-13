@@ -1,24 +1,47 @@
-// app.js
+require('dotenv').config();
+
+const path = require('path');
 const express = require('express');
-const connection = require('./db');  // Importar a conexão com o banco de dados
+const cors = require('cors');
+const { pool, testConnection } = require('./db');
 
-// Criar a aplicação Express
 const app = express();
+const PORT = Number(process.env.PORT || 3000);
 
-// permite que arquivos com funções estaticas funcionem ao mesmo tempo que o node.js
-app.use(express.static(__dirname + '/public'));
+app.use(cors());
+app.use(express.json());
+app.use(express.static(path.join(__dirname, 'public')));
 
-//(INICIO) Rotas para as paginas HTML
-
-// Rota para pagina Inicio/index 
 app.get('/', (req, res) => {
-  res.sendFile(__dirname + '/public/HTML/index.html'); // Vai servir o arquivo HTML
+  res.sendFile(path.join(__dirname, 'public', 'HTML', 'index.html'));
 });
 
-//(FIM) Rotas para as paginas HTML
+app.get('/api/health', async (req, res) => {
+  try {
+    const [rows] = await pool.query('SELECT 1 AS status');
 
+    res.json({
+      ok: true,
+      database: 'connected',
+      result: rows[0],
+    });
+  } catch (error) {
+    console.error('Erro ao consultar o banco:', error.message);
 
-// servidor na porta 3000
-app.listen(3000, () => {
-  console.log("Servidor iniciado na porta 3000: http://localhost:3000");
+    res.status(500).json({
+      ok: false,
+      database: 'disconnected',
+      error: 'Nao foi possivel conectar ao banco de dados.',
+    });
+  }
+});
+
+app.listen(PORT, async () => {
+  console.log(`Servidor iniciado na porta ${PORT}: http://localhost:${PORT}`);
+
+  try {
+    await testConnection();
+  } catch (error) {
+    console.error('Falha ao conectar no MySQL ao iniciar:', error.message);
+  }
 });
