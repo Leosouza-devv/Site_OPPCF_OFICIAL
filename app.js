@@ -45,3 +45,12 @@ app.listen(PORT, async () => {
     console.error('Falha ao conectar no MySQL ao iniciar:', error.message);
   }
 });
+
+app.get('/api/pesquisas', async (req, res) => {
+  try {
+    const [results] = await pool.query("SELECT titulo FROM artigos");
+    res.json(results);
+  } catch (err) {
+    res.status(500).json({ erro: err.message });
+  }
+});

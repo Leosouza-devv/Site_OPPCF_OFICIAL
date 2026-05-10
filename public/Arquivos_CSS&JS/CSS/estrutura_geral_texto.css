@@ -1,0 +1,14 @@
+.info-observatorio {
+    padding: 60px 10%; /* Mantém o respiro em cima e nas laterais */
+    background-color: #fff;
+    display: flex;
+    justify-content: flex-start; /* Alinha o conteúdo para a esquerda */
+}
+
+.info-observatorio p {
+    font-size: 1.2rem; /* Tamanho equilibrado (nem pequeno, nem gigante) */
+    color: #333;       /* Cinza escuro, mais legível que o preto puro */
+    max-width: 800px;  /* Impede que o texto estique até as bordas da tela */
+    line-height: 1.6;  /* Melhora o espaçamento entre letras/linhas */
+}
+
