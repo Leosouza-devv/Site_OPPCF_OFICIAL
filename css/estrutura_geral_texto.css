@@ -1,14 +1,41 @@
 .info-observatorio {
-    padding: 60px 10%; /* Mantém o respiro em cima e nas laterais */
+    padding: 60px 10%; /* Mantem o respiro em cima e nas laterais */
     background-color: #fff;
     display: flex;
-    justify-content: flex-start; /* Alinha o conteúdo para a esquerda */
+    justify-content: space-between; /* Mantem texto e imagem visiveis no mesmo topico */
+    align-items: center;
+    gap: 40px;
 }
 
 .info-observatorio p {
-    font-size: 1.2rem; /* Tamanho equilibrado (nem pequeno, nem gigante) */
-    color: #333;       /* Cinza escuro, mais legível que o preto puro */
-    max-width: 800px;  /* Impede que o texto estique até as bordas da tela */
-    line-height: 1.6;  /* Melhora o espaçamento entre letras/linhas */
+    font-size: 1.2rem; /* Tamanho equilibrado */
+    color: #333;
+    max-width: 800px;
+    line-height: 1.6;
 }
 
+.info-observatorio img {
+    width: 32%;
+    max-width: 360px;
+    min-width: 220px;
+    max-height: 260px;
+    object-fit: contain;
+}
+
+.info-observatorio:first-of-type img {
+    object-fit: cover;
+}
+
+@media (max-width: 800px) {
+    .info-observatorio {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px;
+    }
+
+    .info-observatorio img {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+    }
+}
