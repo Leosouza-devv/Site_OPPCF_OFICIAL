@@ -17,12 +17,18 @@
         font-weight: weight;
         font-style: normal;
         font-variation-settings: "wdth" 100;
+        overflow-x: hidden;
+        scroll-padding-top: var(--header-height);
 
 
         /* -------------------------------------------------------- */
 
         & body {
+            width: 100%;
+            min-width: 0;
             font-size: 62.5%;
+            overflow-x: hidden;
+            line-height: 1.5;
 
             /* -------------------------------------------------------- */
 
@@ -42,4 +48,32 @@
 
         }
 
+    }
+
+    img,
+    picture,
+    video,
+    canvas,
+    svg {
+        max-width: 100%;
+        height: auto;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    a,
+    span,
+    li,
+    strong {
+        overflow-wrap: anywhere;
+        word-break: normal;
+    }
+
+    [id] {
+        scroll-margin-top: var(--header-height);
     }

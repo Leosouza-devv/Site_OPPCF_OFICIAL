@@ -4,8 +4,9 @@ header.cabecalho {
     width: 100%; /* Cabeçalho ocupa toda a largura */
     position: fixed; /* Posição inicial sobre o conteúdo */
     top: 0;
-    z-index: 1; /* Mantém o cabeçalho acima de outros elementos */
-    min-height: 10vh; /* Altura mínima do cabeçalho */
+    left: 0;
+    z-index: 1000; /* Mantém o cabeçalho acima de outros elementos */
+    min-height: var(--header-height); /* Altura estável do cabeçalho fixo */
     box-sizing: border-box; /* Inclui padding e border no cálculo */
     flex-direction: column; /* Organiza os elementos em coluna */
     transition: var(--transition-normal); /* Animações suaves nas mudanças */
@@ -19,6 +20,8 @@ header.cabecalho {
     & div.conteudo_cabecalho {
         display: flex; 
         justify-content: space-around; 
+        align-items: center;
+        min-height: var(--header-height);
         padding: 15px 20px;
  
         transition: var(--transition-normal); 
@@ -31,7 +34,8 @@ header.cabecalho {
         /* -------------------------------------------------------- */
         & div.conteudo_cabecalho {
             margin: 0;
-            padding: 0px 10px; /* Ajuste de espaçamento interno */
+            min-height: var(--header-height);
+            padding: 15px 20px; /* Mantém altura estável para evitar salto visual */
 
         }
 
@@ -55,18 +59,27 @@ div.logo {
     justify-content: center;
     align-items: center;
     gap: var(--spacing-3);
+
+    & a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: var(--spacing-3);
+        color: inherit;
+    }
     
     & h3{
         color: var(--black);
-        font-size: 25px;
+        font-size: clamp(18px, 4vw, 25px);
         
     }
     
     & img {
         max-width: 100px;
-        width: 70px;
-        height: 70px; /* Altura da imagem da logo */
+        width: clamp(52px, 10vw, 70px);
+        height: clamp(52px, 10vw, 70px); /* Altura da imagem da logo */
         margin: 10px 0;
+        object-fit: contain;
     }
 }
 
@@ -104,7 +117,7 @@ nav.navegacao_desktop {
     & ul li a {
         padding: 10px;
         margin: 10px;
-        font-size: 25px;
+        font-size: clamp(16px, 2vw, 25px);
         color: var(--black);
         overflow: hidden;
         position: relative;
@@ -267,6 +280,10 @@ main.invisivel {
     
 }
 
+main {
+    padding-top: var(--header-height);
+}
+
 nav.open {
     width: 100%;
     min-height: 100vh; /* Menu ocupa toda a tela */
@@ -289,7 +306,7 @@ div.a_none {
     & ul li a {
         padding: 10px;
         margin: 10px;
-        font-size: 25px;
+        font-size: clamp(16px, 5vw, 25px);
         color: var(--black);
         overflow: hidden;
         position: relative;
@@ -343,6 +360,10 @@ div.a_none {
 /* -------------------------------------------------------- */
 /* (INICIO) responsividade mobile */
 @media (max-width: 900px) {
+    :root {
+        --header-height: 110px;
+    }
+
     nav.menu_mobile {
         display: block; /* Exibe menu hamburguer */
     }
@@ -363,9 +384,11 @@ div.a_none {
         display: none; /* Oculta redes sociais */
     }
 
-    header {
+    header.cabecalho {
         & div.conteudo_cabecalho {
-            width: 40%; /* Ajusta largura do conteúdo do cabeçalho */
+            width: 100%; /* Ajusta largura do conteúdo do cabeçalho */
+            justify-content: space-between;
+            align-items: center;
             
         }
     }

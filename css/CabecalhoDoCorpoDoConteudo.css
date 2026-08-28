@@ -1,94 +1,162 @@
-/* Estilizações */
+/* Banner superior das páginas internas */
 main.conteudo {
     width: 100%;
-
+    padding-top: var(--header-height);
 }
 
 header.CabecalhoDoCorpoDoConteudo {
-    width: 100%;
-    min-height: 300px;
-    padding: 200px 0 0 0;
-    background-color: var(--color_2);
-    flex-direction: column;
+    position: relative;
+    isolation: isolate;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    gap: 50px;
-    box-shadow: var(--shadow-box);
-
-    & div.CabecalhoDaPaginaPresente {
-        display: flex;
-        flex-wrap: wrap-reverse;
-        justify-content: space-between;
-        margin: 0 auto;
-        width: 85%;
-
-        & h1 {
-            font-size: 40px;
-            display: flex;
-            align-items: center;
-            color: var(--white);
-        }
-
-        & div img {
-            max-width: 100px;
-            max-height: 100px;
-            width: 100px;
-            height: 100px;
-        }
-    }
-
-    & div.CaminhoPercorrido {
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        width: 100%;
-        min-height: 40px;
-
-        background-color: var(--gray-50);
-        font-weight: 400;
-        color: var(--black);
-
-        & p {
-
-            margin: 0 auto;
-            width: 85%;
-
-            & a {
-                color: var(--black);
-                font-size: 18px;
-
-
-                transition: ease-in-out .2s;
-
-                &:hover {
-                    color: var(--color_4);
-                }
-            }
-        }
-
-    }
-
-
+    width: 100%;
+    min-height: clamp(220px, 32vw, 340px);
+    padding: clamp(44px, 8vw, 76px) 0 clamp(24px, 5vw, 42px);
+    overflow: hidden;
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.68), rgba(0, 0, 0, 0.58)),
+        url("../assets/imagens/foto da ponte de ftontin - vale do café.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: var(--shadow-md);
 }
 
-/* Responsividade */
+header.CabecalhoDoCorpoDoConteudo::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background:
+        linear-gradient(90deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.12)),
+        rgba(0, 0, 0, 0.25);
+}
+
+.CabecalhoDaPaginaPresente {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: min(1120px, calc(100% - 32px));
+    margin: 0 auto;
+}
+
+.CabecalhoDaPaginaPresente h1 {
+    max-width: 900px;
+    color: #ffffff;
+    font-size: clamp(30px, 5vw, 52px);
+    font-weight: var(--font-weight-bold);
+    line-height: 1.15;
+    letter-spacing: 0.5px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.linha-pesquisa-page .CabecalhoDaPaginaPresente h1 {
+    display: flex;
+    align-items: stretch;
+    gap: 18px;
+}
+
+.linha-pesquisa-page .CabecalhoDaPaginaPresente h1::before {
+    content: "";
+    flex: 0 0 5px;
+    width: 5px;
+    min-height: 100%;
+    border-radius: 8px;
+    background: linear-gradient(180deg, #2ae57e 0%, #3f96d4 100%);
+    box-shadow: 0 0 16px rgba(42, 229, 126, 0.35);
+}
+
+.iconeDoCabecalhoDaPagina {
+    display: none;
+}
+
+.CaminhoPercorrido {
+    display: flex;
+    align-items: center;
+    width: min(1120px, calc(100% - 32px));
+    min-height: 46px;
+    margin: clamp(20px, 4vw, 32px) auto 0;
+    padding: 10px 16px;
+    border: 1px solid rgba(255, 255, 255, 0.24);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(8px);
+}
+
+.CaminhoPercorrido p {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.82);
+    font-size: clamp(14px, 2vw, 17px);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.4;
+}
+
+.CaminhoPercorrido p > a {
+    color: #ffffff;
+    text-decoration: none;
+    text-underline-offset: 4px;
+    transition: color var(--transition-normal), text-decoration-color var(--transition-normal);
+}
+
+.CaminhoPercorrido p > a:hover,
+.CaminhoPercorrido p > a:focus-visible {
+    color: #2ae57e;
+    text-decoration: underline;
+    text-decoration-color: rgba(42, 229, 126, 0.7);
+}
+
+.CaminhoPercorrido p > span {
+    color: #2ae57e;
+    font-weight: var(--font-weight-semibold);
+}
+
+.CaminhoPercorrido p > a + a::before,
+.CaminhoPercorrido p > span::before {
+    content: "/";
+    display: inline-block;
+    margin: 0 10px 0 0;
+    color: rgba(255, 255, 255, 0.5);
+    font-weight: var(--font-weight-medium);
+    text-decoration: none;
+}
+
+.CaminhoPercorrido p > a + a {
+    color: rgba(255, 255, 255, 0.88);
+}
 
 @media (max-width: 800px) {
-    div.CabecalhoDaPaginaPresente {
-        flex-direction: column-reverse;
-        justify-content: center;
-        align-items: center;
-        gap: 20px;
-
-
-        & h1 {
-            transform: scale(0.9);
-            text-align: center;
-        }
-
-        & div img {
-            transform: scale(0.9);
-        }
+    header.CabecalhoDoCorpoDoConteudo {
+        min-height: 220px;
+        padding: 36px 0 28px;
+        background-position: center;
     }
 
+    .CabecalhoDaPaginaPresente,
+    .CaminhoPercorrido {
+        width: min(100% - 32px, 1120px);
+    }
+
+    .CabecalhoDaPaginaPresente h1 {
+        font-size: clamp(26px, 8vw, 36px);
+        line-height: 1.18;
+    }
+
+    .linha-pesquisa-page .CabecalhoDaPaginaPresente h1 {
+        gap: 12px;
+    }
+
+    .CaminhoPercorrido {
+        align-items: flex-start;
+        min-height: 0;
+        padding: 10px 12px;
+    }
+
+    .CaminhoPercorrido p {
+        gap: 8px;
+    }
 }

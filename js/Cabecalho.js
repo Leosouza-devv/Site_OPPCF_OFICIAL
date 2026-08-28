@@ -2,6 +2,20 @@
 
 /*(INICIO)programação para interação do menu hamburguer */
 
+function atualizarAlturaCabecalho() {
+    const cabecalho = document.querySelector('.cabecalho');
+
+    if (!cabecalho) {
+        return;
+    }
+
+    document.documentElement.style.setProperty('--header-height', `${cabecalho.offsetHeight}px`);
+}
+
+window.addEventListener('DOMContentLoaded', atualizarAlturaCabecalho);
+window.addEventListener('load', atualizarAlturaCabecalho);
+window.addEventListener('resize', atualizarAlturaCabecalho);
+
 
 function menu() {
     let section_none = document.getElementById('informacoes');
@@ -56,7 +70,9 @@ function menu_icones() {
 window.addEventListener('scroll', function () {
 
     let menu_fixo = document.querySelector('.cabecalho');
-    menu_fixo.classList.toggle('cabecalho_fixo', window.scrollY >= 20);
+    if (menu_fixo) {
+        menu_fixo.classList.toggle('cabecalho_fixo', window.scrollY >= 20);
+    }
 
 })
 /*(FIM)programação do cabeçalho fixo */

@@ -5,6 +5,7 @@
     main.informacoes {
         display: block;
         overflow: hidden;
+        width: 100%;
     }
 
     /*(FIM) estilização geral da section */
@@ -19,8 +20,8 @@
         background-size: cover;
         background-position: center;
         width: 100%;
-        padding-top: 15vh;
-        min-height: 100vh;
+        padding-top: clamp(48px, 10vh, 120px);
+        min-height: calc(100vh - var(--header-height));
         position: relative;
         overflow: hidden;
     }
@@ -33,14 +34,17 @@
         color: var(--white);
         margin: 0 20px 0 20px;
         text-align: center;
+        max-width: min(920px, 92vw);
+        min-width: 0;
 
     }
 
     section.introducao div.txt h1 {
-        font-size: 60px;
+        font-size: clamp(36px, 10vw, 60px);
         display: flex;
         justify-content: center;
         align-items: center;
+        line-height: 1.05;
         animation: ease 1.2s animação_h1_introdução;
         animation-delay: 0s;
 
@@ -57,11 +61,13 @@
     }
 
     section.introducao div.txt p {
-        font-size: 40px;
+        font-size: clamp(18px, 6vw, 40px);
         display: flex;
         justify-content: center;
         align-items: center;
         text-align: center;
+        max-width: 100%;
+        line-height: 1.25;
         animation: ease 1.2s animação_p_introdução;
         animation-delay: 0s;
     }
@@ -87,12 +93,12 @@
 
         section.introducao div.txt h1 {
 
-            transform: scale(0.8);
+            width: 100%;
         }
 
 
         section.introducao div.txt p {
-            transform: scale(0.8);
+            width: 100%;
         }
 
 
