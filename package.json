@@ -1,0 +1,26 @@
+{
+  "name": "site_oppcf_oficial",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/Leosouza-devv/Site_OPPCF_OFICIAL#readme",
+  "bugs": {
+    "url": "https://github.com/Leosouza-devv/Site_OPPCF_OFICIAL/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Leosouza-devv/Site_OPPCF_OFICIAL.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "dotenv": "^18.0.0",
+    "express": "^5.2.1",
+    "mysql2": "^3.24.4",
+    "pug": "^3.0.4"
+  }
+}
