@@ -38,3 +38,5 @@ class Publicacao {
         );
     }
 }
+
+module.exports = Publicacao;

@@ -36,3 +36,5 @@ class Linha {
         );
     }
 }
+
+module.exports = Linha;
