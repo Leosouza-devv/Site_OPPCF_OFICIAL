@@ -35,3 +35,13 @@ VALUES
 const getPublicacaoByID = `
 SELECT * FROM publicacoes WHERE id_publicacoes = ?
 `
+
+module.exports = {
+    createUser,
+    getUserByEmail,
+    getUserByID,
+    createLinha,
+    getLinhaByID,
+    createPublicacao,
+    getPublicacaoByID
+}
