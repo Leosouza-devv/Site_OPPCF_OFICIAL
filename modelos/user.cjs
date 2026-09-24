@@ -16,7 +16,7 @@ class Usuario {
     }
 
     static create(newUser) {
-        db.pool(createUser, 
+        db.pool.query(createUser, 
             [newUser.nome, newUser.email, newUser.senha_hash, newUser.id_acesso],
             (err, results) => {
                 if (err) throw err;
@@ -26,7 +26,7 @@ class Usuario {
     }
 
     static getByEmail(email) {
-        db.pool(getUserByEmail, 
+        db.pool.query(getUserByEmail, 
             [email], 
             (err, results) => {
                 if (err) throw err;
@@ -36,7 +36,7 @@ class Usuario {
     }
 
     static getByID(id_usuarios) {
-        db.pool(getUserByEmail, 
+        db.pool.query(getUserByEmail, 
             [id_usuarios], 
             (err, results) => {
                 if (err) throw err;

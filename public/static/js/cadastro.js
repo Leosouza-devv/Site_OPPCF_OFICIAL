@@ -1,6 +1,13 @@
 'use strict';
 
 document.addEventListener('DOMContentLoaded', function () {
+    fetch('/api/user', {
+            method: 'POST',
+            body: JSON.stringify({ nome: 'vini', email: 'a', senha_hash: 'ihqebgidb', id_acesso: 0 })
+        }
+    )
+
+
     const abas = document.querySelectorAll('.aba-acesso');
     const paineis = document.querySelectorAll('.painel-acesso');
 
