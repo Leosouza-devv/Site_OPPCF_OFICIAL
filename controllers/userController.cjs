@@ -3,13 +3,14 @@ const user = require(path.resolve(__dirname + '/../modelos/user.cjs'));
 
 exports.createUser = (req, res) => {
     const newUserData = req.body;
+    console.log(newUserData);
 
-    const newUser = user.Usuario.create(newUserData);
+    const newUser = user.create(newUserData);
     res.send(newUser);
 }
 
-exports.getUser = (req, res) => {
-    const userID = req.params.userID; // Tratar dados
-    const getuser = user.Usuario.getByID(userID); // mudar nome
-    res.send(user);
+exports.getUser = async (req, res) => {
+    const userID = Number(req.params.userID); // Tratar dados
+    const getUser = await user.getByID(userID); // mudar nome
+    res.send(getUser);
 }

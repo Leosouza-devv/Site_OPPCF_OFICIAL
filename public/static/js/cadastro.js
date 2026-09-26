@@ -1,9 +1,14 @@
 'use strict';
 
 document.addEventListener('DOMContentLoaded', function () {
+    
+    // Exemplo apenas
     fetch('/api/user', {
             method: 'POST',
-            body: JSON.stringify({ nome: 'vini', email: 'a', senha_hash: 'ihqebgidb', id_acesso: 0 })
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ nome: 'vini', email: 'b', senha_hash: 'ihqebgidb', id_acesso: 0 })
         }
     )
 
