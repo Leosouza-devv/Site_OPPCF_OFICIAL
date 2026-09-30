@@ -17,23 +17,27 @@ class Linha {
     }
 
     static create(newLinha) {
-        db.pool(createLinha, 
-            [newLinha.nome, newLinha.resumo, newLinha.pdf_path, newLinha.orientador, newLinha.orientandos, newLinha.objetivos],
-            (err, results) => {
-                if (err) throw err;
-                return results;
-            }
-        );
+        return new Promise((resolve, reject) => {
+            db.pool.query(createLinha, 
+                [newLinha.nome, newLinha.resumo, newLinha.pdf_path, newLinha.orientador, newLinha.orientandos, newLinha.objetivos],
+                (err, results) => {
+                    if (err) reject(err);
+                    resolve(results);
+                }
+            );
+        });
     }
 
     static getByID(id_linhas) {
-        db.pool(getLinhaByID, 
-            [id_linhas], 
-            (err, results) => {
-                if (err) throw err;
-                return results;
-            }
-        );
+        return new Promise((resolve, reject) => {
+            db.pool.query(getLinhaByID, 
+                [id_linhas], 
+                (err, results) => {
+                    if (err) reject(err);
+                    resolve(results);
+                }
+            );
+        });
     }
 }
 

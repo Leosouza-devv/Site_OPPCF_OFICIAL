@@ -19,23 +19,27 @@ class Publicacao {
     }
 
     static create(newPublicacao) {
-        db.pool(createPublicacao, 
-            [newPublicacao.tipo, newPublicacao.titulo, newPublicacao.autores, newPublicacao.resumo, newPublicacao.abstract, newPublicacao.pdf_path, newPublicacao.id_linhas],
-            (err, results) => {
-                if (err) throw err;
-                return results;
-            }
-        );
+        return new Promise((resolve, reject) => {
+            db.pool(createPublicacao, 
+                [newPublicacao.tipo, newPublicacao.titulo, newPublicacao.autores, newPublicacao.resumo, newPublicacao.abstract, newPublicacao.pdf_path, newPublicacao.id_linhas],
+                (err, results) => {
+                    if (err) reject(err);
+                    resolve(results);
+                }
+            );
+        });
     }
 
     static getByID(id_Publicacoes) {
-        db.pool(getPublicacaoByID, 
-            [id_Publicacoes], 
-            (err, results) => {
-                if (err) throw err;
-                return results;
-            }
-        );
+        return new Promise((resolve, reject) => {
+            db.pool(getPublicacaoByID, 
+                [id_Publicacoes], 
+                (err, results) => {
+                    if (err) reject(err);
+                    resolve(results);
+                }
+            );
+        });
     }
 }
 

@@ -22,18 +22,18 @@ VALUES
 `
 
 const getLinhaByID = `
-SELECT * FROM linhas WHERE id_linhas = ?
+SELECT * FROM linhas WHERE id_linha = ?
 `
 
 const createPublicacao = `
-INSERT INTO publicacao
-(tipo, titulo, autores, resumo, abstract, pdf_path, id_linhas)
+INSERT INTO publicacoes
+(tipo, titulo, autores, resumo, abstract, pdf_path, id_linha)
 VALUES
 (?, ?, ?, ?, ?, ?, ?)
 `
 
 const getPublicacaoByID = `
-SELECT * FROM publicacoes WHERE id_publicacoes = ?
+SELECT * FROM publicacoes WHERE id_publicacao = ?
 `
 
 module.exports = {

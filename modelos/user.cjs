@@ -16,33 +16,43 @@ class Usuario {
     }
 
     static create(newUser) {
-        db.pool(createUser, 
-            [newUser.nome, newUser.email, newUser.senha_hash, newUser.id_acesso],
-            (err, results) => {
-                if (err) throw err;
-                return results;
-            }
-        );
+        return new Promise((resolve, reject) => {
+            db.pool.query(createUser, 
+                [newUser.nome, newUser.email, newUser.senha_hash, newUser.id_acesso],
+                (err, results) => {
+                    if (err) reject(err);
+                    resolve(results);
+                }
+            );
+        });
     }
 
-    static getByEmail(email) {
-        db.pool(getUserByEmail, 
-            [email], 
-            (err, results) => {
-                if (err) throw err;
-                return results;
-            }
-        );
+    static async getByEmail(email) {
+        return new Promise((resolve, reject) => {
+            db.pool.query(getUserByEmail, 
+                [email], 
+                (err, results) => {
+                    if (err) reject(err);
+                    console.log(results);
+                    resolve(results);
+                }
+            );
+
+        });
     }
 
-    static getByID(id_usuarios) {
-        db.pool(getUserByEmail, 
-            [id_usuarios], 
-            (err, results) => {
-                if (err) throw err;
-                return results;
-            }
-        );
+    static async getByID(id_usuarios) {
+        return new Promise((resolve, reject) => {
+            db.pool.query(getUserByID, 
+                [id_usuarios], 
+                (err, results) => {
+                    if (err) reject(err);
+                    console.log(results);
+                    resolve(results);
+                }
+            );
+
+        });
     }
 }
 
