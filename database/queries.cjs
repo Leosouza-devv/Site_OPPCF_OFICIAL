@@ -1,17 +1,17 @@
 
 const createUser = `
-INSERT INTO users 
+INSERT INTO usuarios 
 (nome, email, senha_hash, id_acesso) 
 VALUES
 (?, ?, ?, ?)
 `;
 
 const getUserByEmail = `
-SELECT * FROM users WHERE email = ?
+SELECT * FROM usuarios WHERE email = ?
 `
 
 const getUserByID = `
-SELECT * FROM users WHERE id_usuario = ?
+SELECT * FROM usuarios WHERE id_usuario = ?
 `
 
 const createLinha = `

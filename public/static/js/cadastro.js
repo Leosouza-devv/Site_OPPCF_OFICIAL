@@ -1,7 +1,7 @@
 'use strict';
 
 document.addEventListener('DOMContentLoaded', function () {
-    
+    console.log('oi');
     // Exemplo apenas
     fetch('/api/user', {
             method: 'POST',
