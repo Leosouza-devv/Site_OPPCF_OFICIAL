@@ -11,6 +11,12 @@ exports.createpublicacao = (req, res) => {
 
 exports.getpublicacao = async (req, res) => {
     const publicacaoID = Number(req.params.publicacaoID); // Tratar dados
-    const getPublicacao = await publicacao.getByID(publicacaoID); // mudar nome
-    res.render('publicacao', { publicacao: getPublicacao });
+    try {
+        const publicacoes = await publicacao.getByID(publicacaoID);
+        if (!publicacoes.length) return res.sendStatus(404);
+        res.render('publicacao', { publicacao: publicacoes[0] });
+    } catch (err) {
+        console.error(err);
+        res.sendStatus(500);
+    }
 }

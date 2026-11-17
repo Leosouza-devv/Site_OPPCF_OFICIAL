@@ -21,7 +21,7 @@ class Linha {
             db.pool.query(createLinha, 
                 [newLinha.nome, newLinha.resumo, newLinha.pdf_path, newLinha.orientador, newLinha.orientandos, newLinha.objetivos],
                 (err, results) => {
-                    if (err) reject(err);
+                    if (err) return reject(err);
                     resolve(results);
                 }
             );
@@ -33,7 +33,7 @@ class Linha {
             db.pool.query(getLinhaByID, 
                 [id_linhas], 
                 (err, results) => {
-                    if (err) reject(err);
+                    if (err) return reject(err);
                     resolve(results);
                 }
             );

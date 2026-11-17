@@ -20,7 +20,7 @@ class Usuario {
             db.pool.query(createUser, 
                 [newUser.nome, newUser.email, newUser.senha_hash, newUser.id_acesso],
                 (err, results) => {
-                    if (err) reject(err);
+                    if (err) return reject(err);
                     resolve(results);
                 }
             );
@@ -32,7 +32,7 @@ class Usuario {
             db.pool.query(getUserByEmail, 
                 [email], 
                 (err, results) => {
-                    if (err) reject(err);
+                    if (err) return reject(err);
                     console.log(results);
                     resolve(results);
                 }
@@ -46,7 +46,7 @@ class Usuario {
             db.pool.query(getUserByID, 
                 [id_usuarios], 
                 (err, results) => {
-                    if (err) reject(err);
+                    if (err) return reject(err);
                     console.log(results);
                     resolve(results);
                 }

@@ -20,10 +20,10 @@ class Publicacao {
 
     static create(newPublicacao) {
         return new Promise((resolve, reject) => {
-            db.pool(createPublicacao, 
-                [newPublicacao.tipo, newPublicacao.titulo, newPublicacao.autores, newPublicacao.resumo, newPublicacao.abstract, newPublicacao.pdf_path, newPublicacao.id_linhas],
+            db.pool.query(createPublicacao, 
+                [newPublicacao.tipo, newPublicacao.titulo, newPublicacao.autores, newPublicacao.resumo, newPublicacao.abstract, newPublicacao.pdf_path, newPublicacao.id_linha],
                 (err, results) => {
-                    if (err) reject(err);
+                    if (err) return reject(err);
                     resolve(results);
                 }
             );
@@ -32,10 +32,10 @@ class Publicacao {
 
     static getByID(id_Publicacoes) {
         return new Promise((resolve, reject) => {
-            db.pool(getPublicacaoByID, 
+            db.pool.query(getPublicacaoByID, 
                 [id_Publicacoes], 
                 (err, results) => {
-                    if (err) reject(err);
+                    if (err) return reject(err);
                     resolve(results);
                 }
             );
