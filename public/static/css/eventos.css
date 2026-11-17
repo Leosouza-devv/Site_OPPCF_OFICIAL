@@ -1,0 +1,241 @@
+.eventos-intro {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 34px 24px 12px;
+}
+
+.eventos-intro p {
+    margin: 0;
+    color: #374151;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+.eventos-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.5fr) minmax(280px, 0.85fr);
+    align-items: start;
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 28px 24px 48px;
+}
+
+.eventos-listagem,
+.eventos-form-card {
+    min-width: 0;
+    padding: clamp(20px, 3vw, 30px);
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0 4px 16px rgba(15, 55, 44, 0.07);
+}
+
+.eventos-titulo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.eventos-eyebrow {
+    margin: 0 0 6px;
+    color: #207f73;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+}
+
+.eventos-titulo h2,
+.eventos-form-card h2 {
+    margin: 0;
+    color: #173829;
+    font-size: clamp(22px, 3vw, 28px);
+}
+
+.eventos-contagem {
+    flex: 0 0 auto;
+    padding: 7px 11px;
+    border-radius: 999px;
+    background: #e8f7f4;
+    color: #155e59;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.eventos-lista {
+    display: grid;
+    gap: 14px;
+}
+
+.evento-vazio {
+    padding: 44px 20px;
+    border: 1px dashed #b9d7cf;
+    border-radius: 8px;
+    background: #f8fcfa;
+    text-align: center;
+}
+
+.evento-vazio > span {
+    color: #207f73;
+    font-size: 34px;
+}
+
+.evento-vazio h3 {
+    margin: 8px 0;
+    color: #173829;
+    font-size: 19px;
+}
+
+.evento-vazio p,
+.eventos-form-intro {
+    margin: 0;
+    color: #5b6570;
+    line-height: 1.55;
+}
+
+.evento-card {
+    display: grid;
+    grid-template-columns: 130px minmax(0, 1fr);
+    gap: 18px;
+    padding: 18px 0;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.evento-card:last-child {
+    border-bottom: 0;
+}
+
+.evento-data {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    color: #207f73;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.evento-detalhes h3 {
+    margin: 0 0 8px;
+    color: #173829;
+    font-size: 19px;
+}
+
+.evento-detalhes p {
+    margin: 0 0 9px;
+    color: #4b5563;
+    line-height: 1.55;
+    overflow-wrap: anywhere;
+}
+
+.evento-detalhes .evento-local {
+    font-size: 14px;
+}
+
+.evento-link {
+    display: inline-flex;
+    gap: 5px;
+    color: #155e59;
+    font-weight: 700;
+    text-underline-offset: 3px;
+}
+
+.eventos-form-card h2 {
+    margin-bottom: 8px;
+}
+
+.eventos-form-card form {
+    display: grid;
+    gap: 16px;
+    margin-top: 22px;
+}
+
+.evento-campo {
+    display: grid;
+    gap: 6px;
+}
+
+.evento-campo label {
+    color: #263b32;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.evento-campo input,
+.evento-campo textarea {
+    width: 100%;
+    min-height: 44px;
+    padding: 10px 12px;
+    border: 1px solid #cfd8d3;
+    border-radius: 6px;
+    background: #fff;
+    color: #1f2937;
+    font: inherit;
+}
+
+.evento-campo textarea {
+    resize: vertical;
+}
+
+.evento-campo input:focus,
+.evento-campo textarea:focus {
+    border-color: #207f73;
+    outline: 3px solid rgba(32, 127, 115, 0.14);
+}
+
+.evento-botao {
+    min-height: 46px;
+    padding: 11px 16px;
+    border: 1px solid #155e59;
+    border-radius: 6px;
+    background: #207f73;
+    color: #fff;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.evento-botao:hover,
+.evento-botao:focus-visible {
+    background: #155e59;
+}
+
+.evento-feedback {
+    min-height: 1.4em;
+    margin: 0;
+    color: #155e59;
+    font-size: 14px;
+}
+
+.eventos-aviso {
+    max-width: 1052px;
+    margin: -24px auto 40px;
+    padding: 0 24px;
+    color: #6b7280;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+@media (max-width: 780px) {
+    .eventos-layout {
+        grid-template-columns: 1fr;
+        padding-inline: 16px;
+    }
+
+    .eventos-intro {
+        padding-inline: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .evento-card {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    .eventos-titulo {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}

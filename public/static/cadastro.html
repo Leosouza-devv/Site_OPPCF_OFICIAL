@@ -9,6 +9,7 @@
     <!-- Scripts JavaScript -->
     <script src="js/botaoScrollTopo.js" defer></script>
     <script src="js/Cabecalho.js" defer></script>
+    <script src="js/usuario.js" defer></script>
     <script src="js/rodape.js" defer></script>
     <script src="js/cookies.js" defer></script>
     <script src="js/cadastro.js" defer></script>
@@ -17,6 +18,7 @@
     <link rel="stylesheet" href="css/variaveisCss.css">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/cabecalho.css">
+    <link rel="stylesheet" href="css/usuario.css">
     <link rel="stylesheet" href="css/rodape.css">
     <link rel="stylesheet" href="css/ScrollTopo.css">
     <link rel="stylesheet" href="css/CabecalhoDoCorpoDoConteudo.css">
@@ -51,6 +53,17 @@
                     </li>
                 </ul>
             </nav>
+            <div class="usuario-area" data-user-root>
+                <a class="usuario-acesso" data-user-access href="cadastro.html?tab=cadastro">Criar conta</a>
+                <div class="usuario-logado" data-user-auth hidden>
+                    <button class="usuario-perfil-botao" data-profile-toggle type="button" aria-expanded="false"><span aria-hidden="true">●</span> <span>Olá, <span data-user-name></span></span></button>
+                    <section class="usuario-menu" data-profile-menu hidden aria-label="Perfil do usuário">
+                        <div class="usuario-identidade"><span class="usuario-avatar" data-user-initial aria-hidden="true"></span><div><strong data-profile-name></strong><span data-profile-email></span></div></div>
+                        <dl class="usuario-dados"><div><dt>Data de nascimento</dt><dd data-profile-birth></dd></div><div><dt>Gênero</dt><dd data-profile-gender></dd></div><div><dt>Cidade</dt><dd data-profile-city></dd></div><div><dt>Raça/cor</dt><dd data-profile-race></dd></div></dl>
+                        <button class="usuario-sair" data-user-logout type="button">Sair</button>
+                    </section>
+                </div>
+            </div>
             <!--(FIM) links de navegação do site pelo computador -->
 
             <!--(INICIO) menu hamburguer para celular -->
@@ -107,7 +120,7 @@
                     </div>
 
                     <section class="painel-acesso active" id="painel-login" role="tabpanel" aria-labelledby="tab-login">
-                        <form action="#" method="POST" class="cadastro-form login-form">
+                        <form action="#" method="POST" class="cadastro-form login-form" data-login-form novalidate>
                             <div class="form-group campo-completo">
                                 <label for="login-email">E-mail:</label>
                                 <input type="email" id="login-email" name="login_email" placeholder="Seu e-mail" autocomplete="email" required>
@@ -119,14 +132,14 @@
                             </div>
 
                             <div class="login-acoes">
-                                <a href="#" class="link-recuperacao">Esqueceu a senha?</a>
                                 <button type="submit" class="btn-cadastro">Entrar</button>
                             </div>
+                            <p class="form-feedback" data-login-feedback aria-live="polite"></p>
                         </form>
                     </section>
 
                     <section class="painel-acesso" id="painel-cadastro" role="tabpanel" aria-labelledby="tab-cadastro" hidden>
-                        <form action="#" method="POST" class="cadastro-form">
+                        <form action="#" method="POST" class="cadastro-form" data-register-form novalidate>
                             <div class="form-grid">
                                 <div class="form-group">
                                     <label for="nome-completo">Nome Completo:</label>
@@ -203,9 +216,11 @@
                             <div class="cadastro-acoes">
                                 <button type="submit" class="btn-cadastro">Criar Minha Conta</button>
                             </div>
+                            <p class="form-feedback" data-register-feedback aria-live="polite"></p>
                         </form>
                     </section>
                 </div>
+                <p class="aviso-demonstracao">Versão demonstrativa: as informações ficam armazenadas somente neste navegador e não são enviadas a um banco de dados. Use dados fictícios. Não informe dados pessoais reais ou sensíveis; este armazenamento local não oferece proteção adequada.</p>
             </div>
         </section>
     </main>

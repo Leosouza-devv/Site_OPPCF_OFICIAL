@@ -1,0 +1,32 @@
+.contato-conteudo {
+    width: min(760px, calc(100% - 32px));
+    margin: 0 auto;
+    padding: clamp(42px, 7vw, 72px) 0;
+}
+
+.contato-conteudo h2 {
+    margin: 0 0 14px;
+    color: #173829;
+    font-size: clamp(24px, 4vw, 32px);
+}
+
+.contato-conteudo p {
+    color: #374151;
+    font-size: 17px;
+    line-height: 1.65;
+}
+
+.contato-email {
+    display: inline-block;
+    margin: 8px 0 18px;
+    color: #155e59;
+    font-size: 19px;
+    font-weight: 700;
+    text-underline-offset: 4px;
+    overflow-wrap: anywhere;
+}
+
+.contato-conteudo .contato-nota {
+    color: #6b7280;
+    font-size: 14px;
+}

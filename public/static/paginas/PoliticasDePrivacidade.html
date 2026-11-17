@@ -9,6 +9,7 @@
     <!-- Scripts JavaScript -->
     <script src="../js/botaoScrollTopo.js" defer></script>
     <script src="../js/Cabecalho.js" defer></script>
+    <script src="../js/usuario.js" defer></script>
     <script src="../js/rodape.js" defer></script>
     <script src="../js/cookies.js" defer></script>
 
@@ -17,6 +18,7 @@
     <link rel="stylesheet" href="../css/variaveisCss.css">
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/cabecalho.css">
+    <link rel="stylesheet" href="../css/usuario.css">
     <link rel="stylesheet" href="../css/rodape.css">
     <link rel="stylesheet" href="../css/ScrollTopo.css">
     <link rel="stylesheet" href="../css/CabecalhoDoCorpoDoConteudo.css">
@@ -52,12 +54,24 @@
                                 src="../assets/imagens/LinhaDePesquisa.svg"> <Span>Linhas de pesquisa</Span> </a></li>
                     <li class="desk_a"><a href="Eventos.html"><img
                                 src="../assets/imagens/Eventos.svg"><span>Eventos</span></a></li>
+                    <li class="desk_a"><a href="dados.html"><span>Dados</span></a></li>
 
                 </ul>
 
 
 
             </nav>
+            <div class="usuario-area" data-user-root>
+                <a class="usuario-acesso" data-user-access href="../cadastro.html?tab=cadastro">Criar conta</a>
+                <div class="usuario-logado" data-user-auth hidden>
+                    <button class="usuario-perfil-botao" data-profile-toggle type="button" aria-expanded="false"><span aria-hidden="true">&#9679;</span> <span>Ol&#225;, <span data-user-name></span></span></button>
+                    <section class="usuario-menu" data-profile-menu hidden aria-label="Perfil do usu&#225;rio">
+                        <div class="usuario-identidade"><span class="usuario-avatar" data-user-initial aria-hidden="true"></span><div><strong data-profile-name></strong><span data-profile-email></span></div></div>
+                        <dl class="usuario-dados"><div><dt>Data de nascimento</dt><dd data-profile-birth></dd></div><div><dt>G&#234;nero</dt><dd data-profile-gender></dd></div><div><dt>Cidade</dt><dd data-profile-city></dd></div><div><dt>Ra&#231;a/cor</dt><dd data-profile-race></dd></div></dl>
+                        <button class="usuario-sair" data-user-logout type="button">Sair</button>
+                    </section>
+                </div>
+            </div>
             <!--(FIM) links de navegação do site pelo computador -->
 
 
@@ -87,6 +101,7 @@
                             src="../assets/imagens/LinhaDePesquisa.svg"> <Span>Linhas de pesquisa</Span> </a></li>
                 <li class="desk_a" style="--a_mobile1: 2;"><a href="Eventos.html"><img
                             src="../assets/imagens/Eventos.svg"><span>Eventos</span></a></li>
+                    <li class="desk_a"><a href="dados.html"><span>Dados</span></a></li>
 
             </ul>
         </div>
@@ -130,9 +145,10 @@
 
     <section class="Politicas_termoDeUso">
         <div class="txt_Politicas_termoDeUso">
+            <p>Esta página apresenta informações gerais sobre o tratamento de dados neste site. O projeto está em versão demonstrativa e não possui, neste momento, um serviço próprio de contas ou banco de dados. O conteúdo abaixo deve ser revisado pelo responsável institucional antes da publicação definitiva, especialmente se forem ativados formulários ou coleta de dados.</p>
             <!-- === Tópico 1 === -->
             <h2 class="topico">1. Informações Gerais</h2>
-            <p>Esta Política de Privacidade descreve como coletamos, usamos, armazenamos e protegemos suas informações pessoais quando você visita e utiliza nosso website. Respeitamos sua privacidade e estamos comprometidos em proteger seus dados pessoais de acordo com a Lei Geral de Proteção de Dados (LGPD) e demais regulamentações aplicáveis.</p>
+            <p>Este site é uma versão demonstrativa. O cadastro e os eventos de demonstração ficam armazenados apenas no armazenamento local do navegador usado para preenchê-los; não são enviados a um servidor do Observatório. Esses dados podem ser apagados pelo usuário ao limpar os dados do navegador. O site também usa armazenamento local para lembrar a preferência de cookies. Serviços de hospedagem e conteúdo externo, como fontes e bibliotecas, podem receber informações técnicas de conexão conforme suas próprias políticas. Não informe dados pessoais reais nos formulários demonstrativos. Antes de ativar coleta ou contas reais, esta política deve ser revisada pelo responsável institucional para descrever finalidades, bases legais, retenção, direitos dos titulares e canal de atendimento aplicáveis.</p>
 
             <div class="linhaDeseparacaoDeTopicos"></div>
 

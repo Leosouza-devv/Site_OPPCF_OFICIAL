@@ -8,6 +8,7 @@
     <!-- Scripts JavaScript -->
     <script src="../js/botaoScrollTopo.js" defer></script>
     <script src="../js/Cabecalho.js" defer></script>
+    <script src="../js/usuario.js" defer></script>
     <script src="../js/rodape.js" defer></script>
     <script src="../js/cookies.js" defer></script>
 
@@ -16,6 +17,7 @@
     <link rel="stylesheet" href="../css/variaveisCss.css">
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/cabecalho.css">
+    <link rel="stylesheet" href="../css/usuario.css">
     <link rel="stylesheet" href="../css/rodape.css">
     <link rel="stylesheet" href="../css/ScrollTopo.css">
     <link rel="stylesheet" href="../css/CabecalhoDoCorpoDoConteudo.css">
@@ -49,12 +51,24 @@
                             <Span>Linhas de pesquisa</Span> </a></li>
                     <li class="desk_a"><a href="Eventos.html"><img src="../assets/imagens/Eventos.svg"><span>Eventos</span></a>
                     </li>
+                    <li class="desk_a"><a href="dados.html"><span>Dados</span></a></li>
 
                 </ul>
 
 
 
             </nav>
+            <div class="usuario-area" data-user-root>
+                <a class="usuario-acesso" data-user-access href="../cadastro.html?tab=cadastro">Criar conta</a>
+                <div class="usuario-logado" data-user-auth hidden>
+                    <button class="usuario-perfil-botao" data-profile-toggle type="button" aria-expanded="false"><span aria-hidden="true">&#9679;</span> <span>Ol&#225;, <span data-user-name></span></span></button>
+                    <section class="usuario-menu" data-profile-menu hidden aria-label="Perfil do usu&#225;rio">
+                        <div class="usuario-identidade"><span class="usuario-avatar" data-user-initial aria-hidden="true"></span><div><strong data-profile-name></strong><span data-profile-email></span></div></div>
+                        <dl class="usuario-dados"><div><dt>Data de nascimento</dt><dd data-profile-birth></dd></div><div><dt>G&#234;nero</dt><dd data-profile-gender></dd></div><div><dt>Cidade</dt><dd data-profile-city></dd></div><div><dt>Ra&#231;a/cor</dt><dd data-profile-race></dd></div></dl>
+                        <button class="usuario-sair" data-user-logout type="button">Sair</button>
+                    </section>
+                </div>
+            </div>
             <!--(FIM) links de navegação do site pelo computador -->
 
 
@@ -84,6 +98,7 @@
                             src="../assets/imagens/LinhaDePesquisa.svg"> <Span>Linhas de pesquisa</Span> </a></li>
                 <li class="desk_a" style="--a_mobile1: 2;"><a href="Eventos.html"><img
                             src="../assets/imagens/Eventos.svg"><span>Eventos</span></a></li>
+                    <li class="desk_a"><a href="dados.html"><span>Dados</span></a></li>
 
             </ul>
         </div>
@@ -118,15 +133,8 @@
 
         <section class="linha-section linha-apresentacao">
             <div class="linha-conteudo">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vitae sem sed magna facilisis aliquam. Aenean tempor, libero vel dignissim faucibus, lectus justo luctus massa, sed interdum sapien nisl at justo. Esta linha de pesquisa organiza estudos, ações acadêmicas e projetos de extensão voltados à compreensão crítica de seu campo temático, articulando produção científica, formação discente e diálogo com a sociedade.</p>
+                <p>A linha Literatura e Sociedade investiga as rela&#231;&#245;es entre a produ&#231;&#227;o liter&#225;ria e os contextos sociais e culturais em que ela circula. A partir de abordagens te&#243;ricas e pr&#225;ticas, prop&#245;e leituras cr&#237;ticas de obras e formas de express&#227;o, considerando como a literatura registra experi&#234;ncias, participa de debates p&#250;blicos e contribui para a forma&#231;&#227;o cultural. O trabalho da linha articula pesquisa, forma&#231;&#227;o de leitores e di&#225;logo com a comunidade.</p>
 
-                <div class="projeto-submissao">
-                    <p>Confira mais sobre o nosso projeto:</p>
-                    <a href="documentos/projeto-linha.pdf" target="_blank" class="btn-pdf" rel="noopener noreferrer">
-                        <i class="fa-solid fa-file-pdf"></i>
-                        <span>Acessar Projeto de Pesquisa (PDF)</span>
-                    </a>
-                </div>
             </div>
         </section>
 
@@ -136,12 +144,12 @@
                 <div class="integrantes-grid">
                     <article class="integrante-card">
                         <h3>Professor Coordenador / Pesquisador Principal</h3>
-                        <p>Nome do professor coordenador. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Atua na orientação científica, no planejamento metodológico e na coordenação das atividades da linha de pesquisa.</p>
+                        <p>Esta p&#225;gina apresenta o campo de atua&#231;&#227;o da linha. As informa&#231;&#245;es sobre coordena&#231;&#227;o e integrantes ser&#227;o inclu&#237;das quando forem confirmadas pelo grupo.</p>
                     </article>
 
                     <article class="integrante-card">
-                        <h3>Discentes Bolsistas (Jovens Talentos / IFRJ)</h3>
-                        <p>Nome dos discentes bolsistas. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Participam da coleta de dados, sistematização de informações, produção de materiais e apoio às ações acadêmicas.</p>
+                        <h3>Estudantes e bolsistas</h3>
+                        <p>A p&#225;gina n&#227;o informa, por enquanto, nomes de estudantes ou bolsistas vinculados a esta linha.</p>
                     </article>
                 </div>
             </div>
