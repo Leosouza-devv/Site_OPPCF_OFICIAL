@@ -71,20 +71,20 @@ html(lang="pt-BR")
         main(class="conteudo linha-pesquisa-page" id="informacoes")
             header(class="CabecalhoDoCorpoDoConteudo")
                 div(class="CabecalhoDaPaginaPresente")
-                    h1 Observatório de Direitos Sociais da População do Centro-Sul Fluminense
+                    h1= nome
                 div(class="CaminhoPercorrido")
                     p
                         a(href="../index.html") Início
                         a(href="LinhasDePesquisa_Geral.html") Linhas de Pesquisa
-                        span(aria-current="page") Observatório de Direitos Sociais da População do Centro-Sul Fluminense
+                        span(aria-current="page")= nome 
 
             section(class="linha-section linha-apresentacao")
                 div(class="linha-conteudo")
-                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vitae sem sed magna facilisis aliquam. Aenean tempor, libero vel dignissim faucibus, lectus justo luctus massa, sed interdum sapien nisl at justo. Esta linha de pesquisa organiza estudos, ações acadêmicas e projetos de extensão voltados à compreensão crítica de seu campo temático, articulando produção científica, formação discente e diálogo com a sociedade.
+                    p= resumo
 
                     div(class="projeto-submissao")
                         p Confira mais sobre o nosso projeto:
-                        a(href="documentos/projeto-linha.pdf", target="_blank", class="btn-pdf", rel="noopener noreferrer")
+                        a(href=pdf_path, target="_blank", class="btn-pdf", rel="noopener noreferrer")
                             i(class="fa-solid fa-file-pdf")
                             span Acessar Projeto de Pesquisa (PDF)
                             
@@ -94,20 +94,15 @@ html(lang="pt-BR")
                     div(class="integrantes-grid")
                         article(class="integrante-card")
                             h3 Professor Coordenador / Pesquisador Principal
-                            p Nome do professor coordenador. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Atua na orientação científica, no planejamento metodológico e na coordenação das atividades da linha de pesquisa.
+                            p= orientador
                         article(class="integrante-card")
                             h3 Discentes Bolsistas (Jovens Talentos / IFRJ)
-                            p Nome dos discentes bolsistas. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Participam da coleta de dados, sistematização de informações, produção de materiais e apoio às ações acadêmicas.
+                            p= orientandos
 
             section(class="linha-section linha-objetivos")
                 div(class="linha-conteudo")
                     h2 Objetivos da Pesquisa
-                    ul(class="objetivos-lista")
-                        li Investigar fenômenos, indicadores e práticas relacionados ao eixo temático da linha de pesquisa.
-                        li Produzir dados, análises e materiais de divulgação científica acessíveis à comunidade acadêmica e regional.
-                        li Fortalecer a formação de estudantes por meio de atividades de pesquisa, extensão e inovação.
-                        li Contribuir para o desenvolvimento de políticas, ações e soluções baseadas em evidências.
-
+                    p= objetivos
 
             footer(class="rodape" id="rodape")
                 section(class="rodapeInformacoes")
