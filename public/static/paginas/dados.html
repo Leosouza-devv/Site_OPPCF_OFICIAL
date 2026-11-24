@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Consulte indicadores oficiais do IBGE para municípios do estado do Rio de Janeiro.">
+    <title>Painel de Dados &#8212; OPPCF</title>
+    <script src="../js/botaoScrollTopo.js" defer></script>
+    <script src="../js/Cabecalho.js" defer></script>
+    <script src="../js/usuario.js" defer></script>
+    <script src="../js/rodape.js" defer></script>
+    <script src="../js/cookies.js" defer></script>
+    <script src="../js/indicadores.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.8/dist/chart.umd.min.js" defer></script>
+    <script src="../js/sidra-api.js" defer></script>
+    <script src="../js/graficos.js" defer></script>
+    <script src="../js/tabelas.js" defer></script>
+    <script src="../js/dados.js" defer></script>
+    <link rel="stylesheet" href="../css/variaveisCss.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/cabecalho.css">
+    <link rel="stylesheet" href="../css/usuario.css">
+    <link rel="stylesheet" href="../css/rodape.css">
+    <link rel="stylesheet" href="../css/ScrollTopo.css">
+    <link rel="stylesheet" href="../css/CabecalhoDoCorpoDoConteudo.css">
+    <link rel="stylesheet" href="../css/cookies.css">
+    <link rel="stylesheet" href="../css/dados.css?v=2">
+</head>
+<body>
+    <header class="cabecalho">
+        <div class="conteudo_cabecalho">
+            <div class="logo"><a href="../index.html" aria-label="Voltar para a página inicial"><img src="../assets/imagens/Logo.svg" alt="Logo do OPPCF"><h3>OPPCF</h3></a></div>
+            <nav class="navegacao_desktop"><ul class="desk_div">
+                <li class="desk_a"><a href="../index.html"><img src="../assets/imagens/home (1) 1.svg" alt=""><span>Início</span></a></li>
+                <li class="desk_a"><a href="LinhasDePesquisa_Geral.html"><img src="../assets/imagens/LinhaDePesquisa.svg" alt=""><span>Linhas de pesquisa</span></a></li>
+                <li class="desk_a"><a href="Eventos.html"><img src="../assets/imagens/Eventos.svg" alt=""><span>Eventos</span></a></li>
+                <li class="desk_a"><a href="#" aria-current="page"><img class="icone-dados" src="../assets/imagens/icone-dados.jpg" alt=""><span>Dados</span></a></li>
+            </ul></nav>
+            <div class="usuario-area" data-user-root>
+                <a class="usuario-acesso" data-user-access href="../cadastro.html?tab=cadastro">Criar conta</a>
+                <div class="usuario-logado" data-user-auth hidden>
+                    <button class="usuario-perfil-botao" data-profile-toggle type="button" aria-expanded="false"><span aria-hidden="true">&#9679;</span> <span>Olá, <span data-user-name></span></span></button>
+                    <section class="usuario-menu" data-profile-menu hidden aria-label="Perfil do usuário">
+                        <div class="usuario-identidade"><span class="usuario-avatar" data-user-initial aria-hidden="true"></span><div><strong data-profile-name></strong><span data-profile-email></span></div></div>
+                        <dl class="usuario-dados"><div><dt>Data de nascimento</dt><dd data-profile-birth></dd></div><div><dt>Gênero</dt><dd data-profile-gender></dd></div><div><dt>Cidade</dt><dd data-profile-city></dd></div><div><dt>Raça/cor</dt><dd data-profile-race></dd></div></dl>
+                        <button class="usuario-sair" data-user-logout type="button">Sair</button>
+                    </section>
+                </div>
+            </div>
+            <input type="checkbox" id="menu-check"><label class="lebel_hamburguer" for="menu-check"><div id="abrir" onclick="menu();"></div></label>
+        </div>
+    </header>
+    <nav class="menu_mobile"><div class="mob_a"><ul class="desk_div">
+        <li class="desk_a"><a href="../index.html"><span>Início</span></a></li><li class="desk_a"><a href="LinhasDePesquisa_Geral.html"><span>Linhas de pesquisa</span></a></li><li class="desk_a"><a href="Eventos.html"><span>Eventos</span></a></li><li class="desk_a"><a href="#" aria-current="page"><span>Dados</span></a></li>
+    </ul></div></nav>
+    <main class="conteudo dados-page" id="informacoes">
+        <header class="CabecalhoDoCorpoDoConteudo"><div class="CabecalhoDaPaginaPresente"><h1>Painel de Dados &#8212; Centro-Sul Fluminense</h1></div><div class="CaminhoPercorrido"><p><a href="../index.html">Início</a><span aria-current="page">Dados</span></p></div></header>
+        <section class="dados-intro"><p>Explore indicadores publicados pelo IBGE, consulte os períodos e compare municípios. Os dados e suas fontes ficam visíveis para apoiar uma leitura com contexto.</p></section>
+        <section class="dados-wrap" aria-labelledby="consulta-titulo">
+            <div class="dados-titulo"><div><p class="dados-eyebrow">EXPLORAÇÃO ESTATÍSTICA</p><h2 id="consulta-titulo">Consulte os indicadores</h2></div><a class="dados-fonte-link" href="https://sidra.ibge.gov.br/" target="_blank" rel="noopener noreferrer">Abrir SIDRA &#8599;</a></div>
+            <div class="dados-aviso" data-region-status role="status"><strong>Delimitação regional pendente:</strong> este projeto ainda não informa uma relação oficial de municípios. A lista abaixo serve para consulta exploratória no RJ e não é apresentada como a delimitação do Centro-Sul Fluminense pelo OPPCF.</div>
+            <div class="dados-filtros">
+                <div class="dados-campo"><label for="filtro-categoria">Categoria</label><select id="filtro-categoria" data-category><option value="Demografia">Demografia</option><option value="Economia">Economia</option></select></div>
+                <div class="dados-campo"><label for="filtro-indicador">Indicador</label><select id="filtro-indicador" data-indicator><option value="population">População residente (Censo 2022)</option><option value="estimate">População residente estimada</option><option value="gdp">PIB a preços correntes</option></select></div>
+                <div class="dados-campo"><label for="filtro-municipio">Municípios para comparação</label><select id="filtro-municipio" data-municipality multiple size="6"><option value="3306107" selected>Valença (RJ)</option><option value="3306206" selected>Vassouras (RJ)</option><option value="3301801" selected>Engenheiro Paulo de Frontin (RJ)</option><option value="3302908" selected>Miguel Pereira (RJ)</option><option value="3303807" selected>Paraty (RJ)</option><option value="3306008" selected>Três Rios (RJ)</option></select><small>Selecione um ou mais municípios. A primeira seleção define a série histórica. Lista exploratória, sem validação regional do OPPCF.</small></div>
+                <div class="dados-campo"><label for="filtro-ano">Ano de referência</label><select id="filtro-ano" data-period></select></div><button class="dados-limpar" type="button" data-reset>Limpar filtros</button>
+            </div>
+            <div class="dados-status" data-status role="status" aria-live="polite">Carregando metadados oficiais do IBGE…</div>
+            <div class="dados-error" data-error hidden role="alert"><span data-error-message></span><button type="button" data-retry>Tentar novamente</button></div>
+            <div class="dados-cards" data-summary></div>
+            <div class="dados-grid">
+                <article class="dados-card"><div class="dados-card-heading"><div><h3 data-chart-title>Comparação entre municípios</h3><p data-chart-note>A seleção do município identifica a série abaixo.</p></div><span class="dados-tag" data-unit></span></div><div class="dados-canvas"><canvas data-chart role="img" aria-label="Gráfico de comparação dos indicadores municipais"></canvas></div><p class="dados-source" data-source></p></article>
+                <article class="dados-card"><div class="dados-card-heading"><div><h3>Série do município</h3><p>Valores publicados para o município selecionado.</p></div></div><div class="dados-canvas"><canvas data-series role="img" aria-label="Série histórica do indicador selecionado"></canvas></div><p class="dados-source" data-series-source></p></article>
+            </div>
+            <article class="dados-card dados-tabela"><div class="dados-card-heading"><div><h3>Tabela estatística</h3><p>Os valores usados nos gráficos, incluindo valores indisponíveis.</p></div><div class="dados-tabela-acoes"><label for="busca-municipio">Pesquisar município</label><input id="busca-municipio" data-search type="search" placeholder="Digite o nome"><button type="button" class="dados-exportar" data-export>Exportar CSV</button></div></div><div class="dados-tabela-wrap"><table><caption data-table-caption>Dados do indicador</caption><thead><tr><th scope="col"><button type="button" data-sort="municipality">Município &#8597;</button></th><th scope="col"><button type="button" data-sort="year">Ano &#8597;</button></th><th scope="col"><button type="button" data-sort="value">Valor &#8597;</button></th><th scope="col">Unidade</th><th scope="col">Fonte</th></tr></thead><tbody data-table-body><tr><td colspan="5">Carregando dados oficiais…</td></tr></tbody></table></div></article>
+            <section class="dados-sobre"><h2>Sobre os dados</h2>
+                <p>Este painel reúne estatísticas municipais do Instituto Brasileiro de Geografia e Estatística (IBGE), consultadas diretamente na API do SIDRA. Use os filtros para escolher um indicador, comparar municípios e consultar anos disponíveis. A primeira cidade selecionada também define a série histórica exibida.</p>
+                <p><strong>Como interpretar:</strong> população do Censo é uma contagem com referência em 2022; estimativa populacional é uma projeção anual do IBGE; e PIB municipal representa o valor da produção de bens e serviços a preços correntes. PIB não mede, por si só, renda distribuída ou qualidade de vida. Cada indicador tem unidade e período próprios, apresentados nos gráficos e na tabela.</p>
+                <p><strong>Limites de uso:</strong> esta lista de municípios é exploratória e ainda não corresponde a uma delimitação regional oficial definida pelo OPPCF. Ausência de valor significa que a API não forneceu observação para aquela combinação de município e período; não significa valor igual a zero. Diferenças entre municípios são descritivas e não demonstram causa e efeito.</p>
+                <div class="dados-metadados" data-metadata></div><p class="dados-atualizacao" data-updated></p>
+            </section>
+        </section>
+    </main>
+    <footer class="rodape" id="rodape"><section class="rodapeInformacoes"><div class="rodapeInstitucional"><h3>Institucional</h3><p><strong>Grupo de pesquisa:</strong> Observatório de Políticas Públicas do Centro-Sul Fluminense</p><p><strong>Instituição:</strong> Instituto Federal do Rio de Janeiro (IFRJ) - Campus Eng. Paulo de Frontin</p><p><strong>Coordenação:</strong> Rodrigo dos Santos Borges</p></div><div class="rodapeSuporte"><h3>Suporte</h3><a href="PoliticasDePrivacidade.html">Políticas de Privacidade</a><a href="TermoDeUsoEticoDaIA.html">Termo de uso ético de Inteligência Artificial - IA</a><a href="https://mail.google.com/mail/?view=cm&fs=1&to=geografia.cepf@ifrj.edu.br" target="_blank" rel="noopener noreferrer">Fale conosco</a></div><div class="rodapeFinanciamentoApoio"><h3>Financiamento e apoio</h3><div><a href="https://www.ifrj.edu.br/" target="_blank" rel="noopener noreferrer"><img src="../assets/imagens/logo-instituto.svg" alt="IFRJ"></a><a href="https://www.faperj.br/" target="_blank" rel="noopener noreferrer"><img src="../assets/imagens/logo_faperj.svg" alt="FAPERJ"></a><a href="https://portal-adm.cnpq.br/" target="_blank" rel="noopener noreferrer"><img src="../assets/imagens/cnpq-logo.svg" alt="CNPq"></a></div></div></section><section class="rodapeCopy"><div><p>&copy; <span id="dateCopy"></span> OPPCF - Todos os direitos reservados.</p></div></section></footer>
+    <div class="botaoTopo"><div class="BT" onclick="scrolltopo()"><span aria-hidden="true">&#8593;</span></div></div><section id="cookies"></section>
+</body>
+</html>
