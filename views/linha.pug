@@ -1,0 +1,152 @@
+// Data: (nome, resumo, pdf_path, orientador, orientandos, objetivos)
+
+doctype html
+html(lang="pt-BR")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        script(src='../public/static/js/botaoScrollTopo.js' defer)
+        script(src='../public/static/js/Cabecalho.js' defer)
+        script(src='../public/static/js/rodape.js' defer)
+        script(src='../public/static/js/cookies.js' defer)
+
+        link(rel="stylesheet", href="/css/variaveisCss.css")
+        link(rel="stylesheet", href="/css/reset.css")
+        link(rel="stylesheet", href="/css/cabecalho.css")
+        link(rel="stylesheet", href="/css/rodape.css")
+        link(rel="stylesheet", href="/css/ScrollTopo.css")
+        link(rel="stylesheet", href="/css/CabecalhoDoCorpoDoConteudo.css")
+        link(rel="stylesheet", href="/css/cookies.css")
+        link(rel="stylesheet", href="/css/estrutura_geral_texto.css")
+
+        script(type="module", src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js")
+        script(nomodule, src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js")
+        script(src="https://kit.fontawesome.com/66e2119c78.js" crossorigin="anonymous")
+        link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
+    body 
+        header(class="cabecalho")
+            div(class="conteudo_cabecalho")
+                div(class="logo")
+                    a(href="../index.html", aria-label="Voltar para a página inicial")
+                        img(src="../assets/imagens/Logo.svg", alt="Imagem da logo do Grupo de Pesquisa")
+                        h3 OPPCF
+                nav(class="navegacao_desktop")
+                    ul(class="desk_div")
+                        li(class="desk_a")
+                            a(href="../index.html")
+                                img(src="../assets/imagens/home (1) 1.svg")
+                                span Início
+                        li(class="desk_a")
+                            a(href="LinhasDePesquisa_Geral.html")
+                                img(src="../assets/imagens/LinhaDePesquisa.svg")
+                                span Linhas de pesquisa
+                        li(class="desk_a")
+                            a(href="Eventos.html")
+                                img(src="../assets/imagens/Eventos.svg")
+                                span Eventos
+                input(type="checkbox", id="menu-check")
+                label(class="lebel_hamburguer", for="menu-check")
+                    div(id="abrir", onclick="menu();")
+
+        nav(class="menu_mobile")
+            div(class="mob_a")
+                ul(class="desk_div")
+                    li(class="desk_a", style="--a_mobile1: 3;")
+                        a(href="../index.html")
+                            img(src="../assets/imagens/home (1) 1.svg")
+                            span Início
+                    li(class="desk_a", style="--a_mobile1: 2.5;")
+                        a(href="LinhasDePesquisa_Geral.html")
+                            img(src="../assets/imagens/LinhaDePesquisa.svg")
+                            span Linhas de pesquisa
+                    li(class="desk_a", style="--a_mobile1: 2;")
+                        a(href="Eventos.html")
+                            img(src="../assets/imagens/Eventos.svg")
+                            span Eventos
+
+        div(class="botaoTopo")
+            div(class="BT", onclick="scrolltopo()")
+                ion-icon(name="chevron-up-sharp")
+
+        main(class="conteudo linha-pesquisa-page" id="informacoes")
+            header(class="CabecalhoDoCorpoDoConteudo")
+                div(class="CabecalhoDaPaginaPresente")
+                    h1= nome
+                div(class="CaminhoPercorrido")
+                    p
+                        a(href="../index.html") Início
+                        a(href="LinhasDePesquisa_Geral.html") Linhas de Pesquisa
+                        span(aria-current="page")= nome 
+
+            section(class="linha-section linha-apresentacao")
+                div(class="linha-conteudo")
+                    p= resumo
+
+                    div(class="projeto-submissao")
+                        p Confira mais sobre o nosso projeto:
+                        a(href=pdf_path, target="_blank", class="btn-pdf", rel="noopener noreferrer")
+                            i(class="fa-solid fa-file-pdf")
+                            span Acessar Projeto de Pesquisa (PDF)
+                            
+            section(class="linha-section linha-integrantes")
+                div(class="linha-conteudo")
+                    h2 Integrantes da Linha de Pesquisa
+                    div(class="integrantes-grid")
+                        article(class="integrante-card")
+                            h3 Professor Coordenador / Pesquisador Principal
+                            p= orientador
+                        article(class="integrante-card")
+                            h3 Discentes Bolsistas (Jovens Talentos / IFRJ)
+                            p= orientandos
+
+            section(class="linha-section linha-objetivos")
+                div(class="linha-conteudo")
+                    h2 Objetivos da Pesquisa
+                    p= objetivos
+
+            footer(class="rodape" id="rodape")
+                section(class="rodapeInformacoes")
+                    div(class="rodapeInstitucional")
+                        h3 Institucional
+                        p
+                            strong Grupo de pesquisa:
+                            | Observatório de Políticas Públicas do Centro-Sul Fluminense
+                        p
+                            strong Instituição:
+                            | Instituto Federal do Rio de Janeiro (IFRJ)-Campus Eng. Paulo de Frontin
+                        p
+                            strong Coordenação:
+                            | Rodrigo dos Santos Borges
+                    div(class="rodapeSuporte")
+                        h3 Suporte
+                        a(href="PoliticasDePrivacidade.html") Políticas de Privacidade
+                        a(href="TermoDeUsoEticoDaIA.html") Termo de uso ético de Inteligência Artificial - IA
+                        a(href="https://mail.google.com/mail/?view=cm&fs=1&to=geografia.cepf@ifrj.edu.br" target="_blank" rel="noopener noreferrer") Fale conosco
+
+                    div(class="rodapeFinanciamentoApoio")
+                        h3 Financiamento e apoio
+                        div
+                            a(href="https://www.ifrj.edu.br/" target="_blank" rel="noopener noreferrer" aria-label="Acessar o site oficial do IFRJ")
+                                img(src="../assets/imagens/logo-instituto.svg" alt="Logo do Instituto Federal do Rio de Janeiro, IFRJ.")
+                            a(href="https://www.faperj.br/" target="_blank" rel="noopener noreferrer" aria-label="Acessar o site oficial da FAPERJ")
+                                img(src="../assets/imagens/logo_faperj.svg" alt="Logo da Fundação de Amparo à Pesquisa do Estado do Rio de Janeiro, FAPERJ.")
+                            a(href="https://portal-adm.cnpq.br/" target="_blank" rel="noopener noreferrer" aria-label="Acessar o site oficial do CNPq")
+                                img(src="../assets/imagens/cnpq-logo.svg" alt="Logo do Conselho Nacional de Desenvolvimento Científico e Tecnológico, CNPq.")
+                        
+                section(class="rodapeCopy")
+                    div
+                        div(class="copy")
+                            p &copy; 
+                                span(id="dateCopy")
+                                |  OPPCF - Todos os direitos reservados.
+                        div(class="rodapeRedes")
+                            p Siga-nos na web
+                            nav(class="rodape_redes_sociais")
+                                a(href="" class="a_redes")
+                                    i(class="fa-brands fa-facebook")
+                                a(href="" class="a_redes")
+                                    i(class="fa-brands fa-instagram")
+                                a(href="" class="a_redes")
+                                    i(class="fa-brands fa-youtube")
+
+        section(id="cookies")
