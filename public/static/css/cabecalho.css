@@ -96,8 +96,9 @@ nav.navegacao_desktop {
     display: flex;
     flex-direction: row;
     text-align: center;
-    max-width: 700px;
-    width: 700px;
+    max-width: 760px;
+    width: min(760px, 62vw);
+    flex: 1 1 auto;
 
     & ul.desk_div {
         width: 100%;
@@ -106,8 +107,9 @@ nav.navegacao_desktop {
         justify-content: center;
         align-items: center;
         flex-direction: row;
-        gap: var(--spacing-6);
-        margin: 10px;
+        gap: clamp(8px, 1.4vw, var(--spacing-6));
+        margin: 8px;
+        padding: 5px 8px;
         background-color: var(--gray-50);
         border-radius: 25px;
         box-shadow: var(--shadow-sm);
@@ -116,8 +118,9 @@ nav.navegacao_desktop {
 
     & ul li a {
         padding: 10px;
-        margin: 10px;
-        font-size: clamp(16px, 2vw, 25px);
+        margin: 4px;
+        padding: 10px 9px;
+        font-size: clamp(15px, 1.65vw, 20px);
         color: var(--black);
         overflow: hidden;
         position: relative;
@@ -126,12 +129,15 @@ nav.navegacao_desktop {
         justify-content: center;
         align-items: center;
         gap: var(--spacing-1);
+        white-space: nowrap;
+        flex: 0 0 auto;
         transition: ease-in-out .2s;
         font-weight: var(--font-weight-normal);
 
         
 
         & span{
+            white-space: nowrap;
             &::before {
                 content: "";
                 position: absolute;
@@ -157,6 +163,13 @@ nav.navegacao_desktop {
             }
         }
     }
+}
+
+nav.navegacao_desktop img.icone-dados {
+    width: clamp(20px, 2vw, 25px);
+    height: clamp(20px, 2vw, 25px);
+    object-fit: contain;
+    border-radius: 5px;
 }
 
 .cabecalho_fixo {

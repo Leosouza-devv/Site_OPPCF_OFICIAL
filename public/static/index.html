@@ -9,6 +9,7 @@
     <!-- Scripts JavaScript -->
     <script src="js/botaoScrollTopo.js" defer></script>
     <script src="js/Cabecalho.js" defer></script>
+    <script src="js/usuario.js" defer></script>
     <script src="js/rodape.js" defer></script>
     <script src="js/cookies.js" defer></script>
 
@@ -17,6 +18,7 @@
     <link rel="stylesheet" href="css/variaveisCss.css">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/cabecalho.css">
+    <link rel="stylesheet" href="css/usuario.css">
     <link rel="stylesheet" href="css/rodape.css">
     <link rel="stylesheet" href="css/ScrollTopo.css">
     <link rel="stylesheet" href="css/paginaInicio.css">
@@ -24,8 +26,6 @@
     <link rel="stylesheet" href="css/estrutura_geral_texto.css">
 
     <!-- Icones e fontes -->
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src="https://kit.fontawesome.com/66e2119c78.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
@@ -39,7 +39,7 @@
         <div class="conteudo_cabecalho">
             <!--(INICIO) Logo do cabeçalho -->
             <div class="logo">
-                <a href="/" aria-label="Voltar para a página inicial">
+                <a href="index.html" aria-label="Voltar para a página inicial">
                     <img src="assets/imagens/Logo.svg" alt="Imagem da logo do Grupo de Pesquisa">
                     <h3>OPPDS</h3>
                 </a>
@@ -49,17 +49,29 @@
             <!--(INICIO) links de navegação do site pelo computador -->
             <nav class="navegacao_desktop">
                 <ul class="desk_div">
-                    <li class="desk_a"><a href="/"> <img src="assets/imagens/home (1) 1.svg"></img><span>Início</span></a></li>
-                    <li class="desk_a"> <a href="/linhas"> <img src="assets/imagens/LinhaDePesquisa.svg">
+                    <li class="desk_a"><a href="#"> <img src="assets/imagens/home (1) 1.svg"></img><span>Início</span></a></li>
+                    <li class="desk_a"> <a href="paginas/LinhasDePesquisa_Geral.html"> <img src="assets/imagens/LinhaDePesquisa.svg">
                             <Span>Linhas de pesquisa</Span> </a></li>
-                    <li class="desk_a"><a href="/eventos"><img src="assets/imagens/Eventos.svg"><span>Eventos</span></a>
+                    <li class="desk_a"><a href="paginas/Eventos.html"><img src="assets/imagens/Eventos.svg"><span>Eventos</span></a>
                     </li>
+                    <li class="desk_a"><a href="paginas/dados.html"><span>Dados</span></a></li>
 
                 </ul>
 
 
 
             </nav>
+            <div class="usuario-area" data-user-root>
+                <a class="usuario-acesso" data-user-access href="cadastro.html?tab=cadastro">Criar conta</a>
+                <div class="usuario-logado" data-user-auth hidden>
+                    <button class="usuario-perfil-botao" data-profile-toggle type="button" aria-expanded="false"><span aria-hidden="true">♙</span> <span>Olá, <span data-user-name></span></span></button>
+                    <section class="usuario-menu" data-profile-menu hidden aria-label="Perfil do usuário">
+                        <div class="usuario-identidade"><span class="usuario-avatar" data-user-initial aria-hidden="true"></span><div><strong data-profile-name></strong><span data-profile-email></span></div></div>
+                        <dl class="usuario-dados"><div><dt>Data de nascimento</dt><dd data-profile-birth></dd></div><div><dt>Gênero</dt><dd data-profile-gender></dd></div><div><dt>Cidade</dt><dd data-profile-city></dd></div><div><dt>Raça/cor</dt><dd data-profile-race></dd></div></dl>
+                        <button class="usuario-sair" data-user-logout type="button">Sair</button>
+                    </section>
+                </div>
+            </div>
             <!--(FIM) links de navegação do site pelo computador -->
 
 
@@ -89,6 +101,7 @@
                             src="assets/imagens/LinhaDePesquisa.svg"> <Span>Linhas de pesquisa</Span> </a></li>
                 <li class="desk_a" style="--a_mobile1: 2;"><a href="paginas/Eventos.html"><img
                             src="assets/imagens/Eventos.svg"><span>Eventos</span></a></li>
+                <li class="desk_a" style="--a_mobile1: 1.5;"><a href="paginas/dados.html"><span>Dados</span></a></li>
 
             </ul>
         </div>
@@ -102,7 +115,7 @@
 
     <div class="botaoTopo">
         <div class="BT" onclick="scrolltopo()">
-            <ion-icon name="chevron-up-sharp"></ion-icon>
+            <span aria-hidden="true">↑</span>
         </div>
     </div>
 
@@ -126,12 +139,12 @@
     <!--(INICIO) seção de informações do site -->
 
     <section class="info-observatorio">
-        <p> <strong>O que é o Observatório de Políticas Públicas?</strong><br><br>O Observatório de Políticas Públicas é um grupo de pesquisa interdisciplinar dedicado à produção de conhecimento científico, ao desenvolvimento de projetos de pesquisa e à promoção de ações voltadas ao ensino, à extensão e à inovação. Sua proposta é reunir pesquisadores, docentes e estudantes em um ambiente colaborativo, capaz de integrar diferentes áreas do conhecimento para compreender desafios sociais, educacionais e institucionais, contribuindo para a construção de soluções baseadas em evidências. Mais do que um único projeto, o Observatório funciona como um espaço de articulação entre diversas iniciativas de pesquisa, fortalecendo a produção acadêmica e aproximando a instituição da comunidade por meio de estudos, análises e projetos com impacto regional e social.</p>
+        <p> <strong>O que é o Observatório de Políticas Públicas?</strong><br><br>O Observatório de Políticas Públicas é um grupo de pesquisa interdisciplinar dedicado à produção científica e ao desenvolvimento de atividades de ensino, pesquisa, extensão e inovação. Reúne pesquisadores, docentes e estudantes na investigação de questões sociais, educacionais e institucionais, promovendo a integração entre diferentes áreas do conhecimento e a produção de estudos fundamentados em evidências. Sua atuação busca fortalecer a pesquisa acadêmica e aproximar o conhecimento científico das demandas da sociedade, com atenção especial à realidade regional.</p>
         <img src="assets/imagens/foto da ponte de ftontin - vale do café.png" alt="Vista da ponte de Paulo de Frontin, no Vale do Café.">
     </section>
 
     <section class="info-observatorio info-organizacao">
-        <p> <strong>Como o Observatório é organizado?</strong><br><br>O Observatório de Políticas Públicas está estruturado como um projeto guarda-chuva, composto por diferentes linhas de pesquisa. Cada linha possui uma temática específica, coordenação própria e autonomia para desenvolver projetos, pesquisas, eventos e demais atividades acadêmicas, mantendo-se integrada ao objetivo comum do Observatório. Essa organização permite que diferentes áreas atuem de forma colaborativa, compartilhando conhecimentos e experiências, ao mesmo tempo em que preservam suas particularidades. Dessa forma, o Observatório amplia seu alcance, incentiva a interdisciplinaridade e fortalece a produção científica em múltiplos campos de atuação.</p>
+        <p> <strong>Como o Observatório é organizado?</strong><br><br>O Observatório de Políticas Públicas estrutura-se como um projeto guarda-chuva, reunindo diferentes linhas de pesquisa, cada uma com temática e coordenação próprias. Essa organização permite o desenvolvimento autônomo de pesquisas e atividades acadêmicas, preservando a integração entre as iniciativas e os objetivos institucionais do Observatório. Dessa forma, o Observatório amplia seu alcance, incentiva a interdisciplinaridade e fortalece a produção científica em múltiplos campos de atuação.</p>
 
         <div class="linhas-pesquisa-grid">
             <article class="linha-card linha-card-oppds">
@@ -185,8 +198,8 @@
 
             <div class="rodapeSuporte">
                 <h3>Suporte</h3>
-                <a href="/legal/privacidade">Políticas de Privacidade</a>
-                <a href="/legal/ia">Termo de uso ético de Inteligência Artificial - IA</a>
+                <a href="paginas/PoliticasDePrivacidade.html">Políticas de Privacidade</a>
+                <a href="paginas/TermoDeUsoEticoDaIA.html">Termo de uso ético de Inteligência Artificial - IA</a>
                 <a href="https://mail.google.com/mail/?view=cm&fs=1&to=geografia.cepf@ifrj.edu.br" target="_blank" rel="noopener noreferrer">Fale conosco</a>
             </div>
 
