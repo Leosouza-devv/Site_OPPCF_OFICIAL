@@ -59,12 +59,43 @@
         <section class="dados-wrap" aria-labelledby="consulta-titulo">
             <div class="dados-titulo"><div><p class="dados-eyebrow">EXPLORAÇÃO ESTATÍSTICA</p><h2 id="consulta-titulo">Consulte os indicadores</h2></div><a class="dados-fonte-link" href="https://sidra.ibge.gov.br/" target="_blank" rel="noopener noreferrer">Abrir SIDRA &#8599;</a></div>
             <div class="dados-aviso" data-region-status role="status"><strong>Delimitação regional pendente:</strong> este projeto ainda não informa uma relação oficial de municípios. A lista abaixo serve para consulta exploratória no RJ e não é apresentada como a delimitação do Centro-Sul Fluminense pelo OPPCF.</div>
+
             <div class="dados-filtros">
-                <div class="dados-campo"><label for="filtro-categoria">Categoria</label><select id="filtro-categoria" data-category><option value="Demografia">Demografia</option><option value="Economia">Economia</option></select></div>
-                <div class="dados-campo"><label for="filtro-indicador">Indicador</label><select id="filtro-indicador" data-indicator><option value="population">População residente (Censo 2022)</option><option value="estimate">População residente estimada</option><option value="gdp">PIB a preços correntes</option></select></div>
-                <div class="dados-campo"><label for="filtro-municipio">Municípios para comparação</label><select id="filtro-municipio" data-municipality multiple size="6"><option value="3306107" selected>Valença (RJ)</option><option value="3306206" selected>Vassouras (RJ)</option><option value="3301801" selected>Engenheiro Paulo de Frontin (RJ)</option><option value="3302908" selected>Miguel Pereira (RJ)</option><option value="3303807" selected>Paraty (RJ)</option><option value="3306008" selected>Três Rios (RJ)</option></select><small>Selecione um ou mais municípios. A primeira seleção define a série histórica. Lista exploratória, sem validação regional do OPPCF.</small></div>
-                <div class="dados-campo"><label for="filtro-ano">Ano de referência</label><select id="filtro-ano" data-period></select></div><button class="dados-limpar" type="button" data-reset>Limpar filtros</button>
+                <div class="dados-campo">
+                    <label for="filtro-categoria">Categoria</label>
+                    <select id="filtro-categoria" data-category>
+                        <option value="Demografia">Demografia</option>
+                        <option value="Economia">Economia</option>
+                    </select>
+                </div>
+                <div class="dados-campo">
+                    <label for="filtro-indicador">Indicador</label>
+                    <select id="filtro-indicador" data-indicator>
+                        <option value="population">População residente (Censo 2022)</option>
+                        <option value="estimate">População residente estimada</option>
+                        <option value="gdp">PIB a preços correntes</option>
+                    </select>
+                </div>
+                <div class="dados-campo">
+                    <label for="filtro-municipio">Municípios para comparação</label>
+                    <div id="filtro-municipio" data-municipality multiple size="6">
+                        <input id="municipio-all" type="checkbox" value="all" selected></input> <label for="municipio-all">Todos os municípios</label><br>
+                        <input id="municipio-valenca" type="checkbox" value="3306107" selected></input> <label for="municipio-valenca">Valença (RJ)</label><br>
+                        <input id="municipio-vassouras" type="checkbox" value="3306206" selected></input> <label for="municipio-vassouras">Vassouras (RJ)</label><br>
+                        <input id="municipio-engenheiro-paulo-de-frontin" type="checkbox" value="3301801" selected></input> <label for="municipio-engenheiro-paulo-de-frontin">Engenheiro Paulo de Frontin (RJ)</label><br>
+                        <input id="municipio-miguel-pereira" type="checkbox" value="3302908" selected></input> <label for="municipio-miguel-pereira">Miguel Pereira (RJ)</label><br>
+                        <input id="municipio-paraty" type="checkbox" value="3303807" selected></input> <label for="municipio-paraty">Paraty (RJ)</label><br>
+                        <input id="municipio-três-rios" type="checkbox" value="3306008" selected></input> <label for="municipio-três-rios">Três Rios (RJ)</label>
+                    </div>
+                    <small>Selecione um ou mais municípios. A primeira seleção define a série histórica. Lista exploratória, sem validação regional do OPPCF.</small>
+                </div>
+                <div class="dados-campo">
+                    <label for="filtro-ano">Ano de referência</label>
+                    <select id="filtro-ano" data-period></select>
+                </div>
+                <button class="dados-limpar" type="button" data-reset>Limpar filtros</button>
             </div>
+
             <div class="dados-status" data-status role="status" aria-live="polite">Carregando metadados oficiais do IBGE…</div>
             <div class="dados-error" data-error hidden role="alert"><span data-error-message></span><button type="button" data-retry>Tentar novamente</button></div>
             <div class="dados-cards" data-summary></div>

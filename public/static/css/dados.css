@@ -12,7 +12,7 @@ nav.menu_mobile a[aria-current="page"] { color: #155e59; font-weight: 700; }
 .dados-aviso { padding: 16px 18px; border: 1px solid #ead49b; border-left: 4px solid #b7791f; border-radius: 7px; background: #fffaf0; color: #674d18; line-height: 1.6; }
 .dados-filtros { display: grid; grid-template-columns: 1.1fr 1.2fr .7fr auto; align-items: start; gap: 14px; padding: 20px; border: 1px solid #e5e7eb; border-radius: 9px; background: #fff; box-shadow: var(--shadow-sm); }
 .dados-campo { display: grid; gap: 7px; min-width: 0; }
-.dados-campo label { position: static; left: auto; z-index: auto; display: block; color: #28292a; font-weight: 700; font-size: 15px; line-height: 1.35; }
+.dados-campo label { position: static; left: auto; z-index: auto; display: inline; color: #28292a; font-weight: 700; font-size: 15px; line-height: 1.35; }
 .dados-campo select { width: 100%; min-height: 44px; padding: 9px 12px; border: 1px solid #d1d5db; border-radius: 6px; background: #fff; color: #1f2937; font: inherit; }
 .dados-campo select[multiple] { min-height: 136px; padding: 6px; }
 .dados-campo select[multiple] option { padding: 5px 7px; }
