@@ -27,21 +27,21 @@ html(lang="pt-BR")
         header(class="cabecalho")
             div(class="conteudo_cabecalho")
                 div(class="logo")
-                    a(href="../index.html", aria-label="Voltar para a página inicial")
+                    a(href="/", aria-label="Voltar para a página inicial")
                         img(src="../assets/imagens/Logo.svg", alt="Imagem da logo do Grupo de Pesquisa")
                         h3 OPPCF
                 nav(class="navegacao_desktop")
                     ul(class="desk_div")
                         li(class="desk_a")
-                            a(href="../index.html")
+                            a(href="/")
                                 img(src="../assets/imagens/home (1) 1.svg")
                                 span Início
                         li(class="desk_a")
-                            a(href="LinhasDePesquisa_Geral.html")
+                            a(href="/linhas")
                                 img(src="../assets/imagens/LinhaDePesquisa.svg")
                                 span Linhas de pesquisa
                         li(class="desk_a")
-                            a(href="Eventos.html")
+                            a(href="/eventos")
                                 img(src="../assets/imagens/Eventos.svg")
                                 span Eventos
                 input(type="checkbox", id="menu-check")
@@ -52,15 +52,15 @@ html(lang="pt-BR")
             div(class="mob_a")
                 ul(class="desk_div")
                     li(class="desk_a", style="--a_mobile1: 3;")
-                        a(href="../index.html")
+                        a(href="/")
                             img(src="../assets/imagens/home (1) 1.svg")
                             span Início
                     li(class="desk_a", style="--a_mobile1: 2.5;")
-                        a(href="LinhasDePesquisa_Geral.html")
+                        a(href="/linhas")
                             img(src="../assets/imagens/LinhaDePesquisa.svg")
                             span Linhas de pesquisa
                     li(class="desk_a", style="--a_mobile1: 2;")
-                        a(href="Eventos.html")
+                        a(href="/eventos")
                             img(src="../assets/imagens/Eventos.svg")
                             span Eventos
 
@@ -74,8 +74,8 @@ html(lang="pt-BR")
                     h1= nome
                 div(class="CaminhoPercorrido")
                     p
-                        a(href="../index.html") Início
-                        a(href="LinhasDePesquisa_Geral.html") Linhas de Pesquisa
+                        a(href="/") Início
+                        a(href="/linhas") Linhas de Pesquisa
                         span(aria-current="page")= nome 
 
             section(class="linha-section linha-apresentacao")
@@ -119,8 +119,8 @@ html(lang="pt-BR")
                             | Rodrigo dos Santos Borges
                     div(class="rodapeSuporte")
                         h3 Suporte
-                        a(href="PoliticasDePrivacidade.html") Políticas de Privacidade
-                        a(href="TermoDeUsoEticoDaIA.html") Termo de uso ético de Inteligência Artificial - IA
+                        a(href="/legal/privacidade") Políticas de Privacidade
+                        a(href="/legal/ia") Termo de uso ético de Inteligência Artificial - IA
                         a(href="https://mail.google.com/mail/?view=cm&fs=1&to=geografia.cepf@ifrj.edu.br" target="_blank" rel="noopener noreferrer") Fale conosco
 
                     div(class="rodapeFinanciamentoApoio")
