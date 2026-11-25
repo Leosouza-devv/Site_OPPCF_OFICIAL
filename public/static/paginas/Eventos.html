@@ -9,6 +9,7 @@
     <!-- Scripts JavaScript -->
     <script src="../js/botaoScrollTopo.js" defer></script>
     <script src="../js/Cabecalho.js" defer></script>
+    <script src="../js/usuario.js" defer></script>
     <script src="../js/rodape.js" defer></script>
     <script src="../js/cookies.js" defer></script>
 
@@ -17,15 +18,16 @@
     <link rel="stylesheet" href="../css/variaveisCss.css">
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/cabecalho.css">
+    <link rel="stylesheet" href="../css/usuario.css">
     <link rel="stylesheet" href="../css/rodape.css">
     <link rel="stylesheet" href="../css/ScrollTopo.css">
     <link rel="stylesheet" href="../css/CabecalhoDoCorpoDoConteudo.css">
     <link rel="stylesheet" href="../css/Cards_TXT+IMG.css">
     <link rel="stylesheet" href="../css/cookies.css">
+    <link rel="stylesheet" href="../css/eventos.css">
+    <script src="../js/eventos.js" defer></script>
 
     <!-- Icones e fontes -->
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src="https://kit.fontawesome.com/66e2119c78.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
@@ -60,6 +62,17 @@
 
 
             </nav>
+            <div class="usuario-area" data-user-root>
+                <a class="usuario-acesso" data-user-access href="../cadastro.html?tab=cadastro">Criar conta</a>
+                <div class="usuario-logado" data-user-auth hidden>
+                    <button class="usuario-perfil-botao" data-profile-toggle type="button" aria-expanded="false"><span aria-hidden="true">&#9679;</span> <span>Ol&#225;, <span data-user-name></span></span></button>
+                    <section class="usuario-menu" data-profile-menu hidden aria-label="Perfil do usu&#225;rio">
+                        <div class="usuario-identidade"><span class="usuario-avatar" data-user-initial aria-hidden="true"></span><div><strong data-profile-name></strong><span data-profile-email></span></div></div>
+                        <dl class="usuario-dados"><div><dt>Data de nascimento</dt><dd data-profile-birth></dd></div><div><dt>G&#234;nero</dt><dd data-profile-gender></dd></div><div><dt>Cidade</dt><dd data-profile-city></dd></div><div><dt>Ra&#231;a/cor</dt><dd data-profile-race></dd></div></dl>
+                        <button class="usuario-sair" data-user-logout type="button">Sair</button>
+                    </section>
+                </div>
+            </div>
             <!--(FIM) links de navegação do site pelo computador -->
 
 
@@ -89,6 +102,7 @@
                             src="../assets/imagens/LinhaDePesquisa.svg"> <Span>Linhas de pesquisa</Span> </a></li>
                 <li class="desk_a" style="--a_mobile1: 2;"><a href="/eventos"><img
                             src="../assets/imagens/Eventos.svg"><span>Eventos</span></a></li>
+                <li class="desk_a" style="--a_mobile1: 1.5;"><a href="dados.html"><span>Dados</span></a></li>
 
             </ul>
         </div>
@@ -102,7 +116,7 @@
 
     <div class="botaoTopo">
         <div class="BT" onclick="scrolltopo()">
-            <ion-icon name="chevron-up-sharp"></ion-icon>
+            <span aria-hidden="true">↑</span>
         </div>
     </div>
 
@@ -128,13 +142,38 @@
 
         <!-- ------------------------------------------------------------------------------------------------------------------------------ -->
 
-        <!-- === Cards + Imagem - Cards dos Eventos em que o grupo de pesquisa participou === -->
+        <section class="eventos-intro">
+            <p>Este espaço reúne atividades acadêmicas promovidas ou acompanhadas pelo Observatório e suas linhas de pesquisa. Consulte os próximos encontros ou registre um evento para organizar a divulgação.</p>
+        </section>
+
+        <section class="eventos-layout" aria-label="Eventos e cadastro de eventos">
+            <div class="eventos-listagem">
+                <div class="eventos-titulo"><div><p class="eventos-eyebrow">AGENDA DO OBSERVATÓRIO</p><h2>Eventos</h2></div><span class="eventos-contagem" data-event-count>0 eventos</span></div>
+                <div class="eventos-lista" data-event-list aria-live="polite"></div>
+            </div>
+
+            <aside class="eventos-form-card">
+                <h2>Adicionar evento</h2>
+                <p class="eventos-form-intro">Preencha as informações para registrar uma atividade nesta agenda.</p>
+                <form data-event-form>
+                    <div class="evento-campo"><label for="evento-titulo">Título do evento</label><input id="evento-titulo" name="title" type="text" maxlength="120" required></div>
+                    <div class="evento-campo"><label for="evento-descricao">Descrição</label><textarea id="evento-descricao" name="description" rows="4" maxlength="600" required></textarea></div>
+                    <div class="evento-campo"><label for="evento-data">Data</label><input id="evento-data" name="date" type="date" required></div>
+                    <div class="evento-campo"><label for="evento-horario">Horário</label><input id="evento-horario" name="time" type="time"></div>
+                    <div class="evento-campo"><label for="evento-local">Local ou formato</label><input id="evento-local" name="location" type="text" maxlength="120" placeholder="Ex.: IFRJ, Campus Eng. Paulo de Frontin"></div>
+                    <div class="evento-campo"><label for="evento-link">Link de inscrição ou transmissão (opcional)</label><input id="evento-link" name="link" type="url" placeholder="https://"></div>
+                    <button class="evento-botao" type="submit">Adicionar à agenda</button>
+                    <p class="evento-feedback" data-event-feedback role="status" aria-live="polite"></p>
+                </form>
+            </aside>
+        </section>
+        <p class="eventos-aviso">Modelo demonstrativo: os eventos adicionados ficam salvos somente neste navegador e não são publicados para outros visitantes. Para uma agenda compartilhada, será necessário conectar o site a um serviço de armazenamento.</p>
 
     </main>
 
 
     <!--(INICIO) Corpo do conteudo do site -->
-    sem eventos
+
 
     <!--(INICIO) rodapé do site -->
     <footer class="rodape" id="rodape">

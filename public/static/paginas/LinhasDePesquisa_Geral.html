@@ -9,6 +9,7 @@
     <!-- Scripts JavaScript -->
     <script src="../js/botaoScrollTopo.js" defer></script>
     <script src="../js/Cabecalho.js" defer></script>
+    <script src="../js/usuario.js" defer></script>
     <script src="../js/rodape.js" defer></script>
     <script src="../js/cookies.js" defer></script>
 
@@ -17,6 +18,7 @@
     <link rel="stylesheet" href="../css/variaveisCss.css">
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/cabecalho.css">
+    <link rel="stylesheet" href="../css/usuario.css">
     <link rel="stylesheet" href="../css/rodape.css">
     <link rel="stylesheet" href="../css/ScrollTopo.css">
     <link rel="stylesheet" href="../css/CabecalhoDoCorpoDoConteudo.css">
@@ -25,8 +27,6 @@
 
 
     <!-- Icones e fontes -->
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src="https://kit.fontawesome.com/66e2119c78.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
@@ -60,6 +60,17 @@
 
 
             </nav>
+            <div class="usuario-area" data-user-root>
+                <a class="usuario-acesso" data-user-access href="../cadastro.html?tab=cadastro">Criar conta</a>
+                <div class="usuario-logado" data-user-auth hidden>
+                    <button class="usuario-perfil-botao" data-profile-toggle type="button" aria-expanded="false"><span aria-hidden="true">&#9679;</span> <span>Ol&#225;, <span data-user-name></span></span></button>
+                    <section class="usuario-menu" data-profile-menu hidden aria-label="Perfil do usu&#225;rio">
+                        <div class="usuario-identidade"><span class="usuario-avatar" data-user-initial aria-hidden="true"></span><div><strong data-profile-name></strong><span data-profile-email></span></div></div>
+                        <dl class="usuario-dados"><div><dt>Data de nascimento</dt><dd data-profile-birth></dd></div><div><dt>G&#234;nero</dt><dd data-profile-gender></dd></div><div><dt>Cidade</dt><dd data-profile-city></dd></div><div><dt>Ra&#231;a/cor</dt><dd data-profile-race></dd></div></dl>
+                        <button class="usuario-sair" data-user-logout type="button">Sair</button>
+                    </section>
+                </div>
+            </div>
             <!--(FIM) links de navegação do site pelo computador -->
 
 
@@ -89,6 +100,7 @@
                         <Span>Linhas de pesquisa</Span> </a></li>
                 <li class="desk_a" style="--a_mobile1: 2;"><a href="/eventos"><img
                             src="../assets/imagens/Eventos.svg"><span>Eventos</span></a></li>
+                    <li class="desk_a"><a href="dados.html"><span>Dados</span></a></li>
 
             </ul>
         </div>
@@ -102,7 +114,7 @@
 
     <div class="botaoTopo">
         <div class="BT" onclick="scrolltopo()">
-            <ion-icon name="chevron-up-sharp"></ion-icon>
+            <span aria-hidden="true">↑</span>
         </div>
     </div>
 
@@ -158,7 +170,7 @@
                         <span class="tag">Gestão</span>
                     </div>
                     <div class="description">
-                        Laboratório especializado na análise, desenvolvimento e implementação de políticas institucionais no âmbito do IFRJ Campus Pinheiral, focando em processos de gestão educacional, desenvolvimento organizacional e inovação em políticas públicas educacionais.
+                        Analisa e avalia continuamente as políticas e práticas do IFRJ para atender a população ao seu redor. A iniciativa busca qualificar a oferta educacional, fortalecer a transparência e o controle social, além de promover a formação cidadã e o desenvolvimento local e regional.
                     </div>
                     <a href="/linha/2" class="saiba-mais" role="button">
                         <span>Saiba mais</span>
