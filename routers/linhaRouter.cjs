@@ -5,7 +5,7 @@ const linhaController = require(path.resolve(__dirname + '/../controllers/linhaC
 
 const linhaRouter = require('express').Router();
 console.log(linhaController);
-linhaRouter.post('/api/linha', linhaController.createLinha);
+// linhaRouter.post('/api/linha', linhaController.createLinha);
 
 linhaRouter.get('/linha/:linhaID', linhaController.getLinha);
 

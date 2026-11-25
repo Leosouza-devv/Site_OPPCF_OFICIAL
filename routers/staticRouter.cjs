@@ -12,8 +12,8 @@ staticRouter.get('/eventos', (req, res) => {
     res.sendFile(path.resolve(__dirname + '/../public/static/paginas/Eventos.html'));
 });
 
-staticRouter.get('/cadastro', (req, res) => {
+/* staticRouter.get('/cadastro', (req, res) => {
     res.sendFile(path.resolve(__dirname + '/../public/static/cadastro.html'));
-});
+}); */
 
 module.exports = staticRouter;

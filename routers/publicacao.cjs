@@ -5,8 +5,8 @@ const publicacaoController = require(path.resolve(__dirname + '/../controllers/p
 
 const publicacaoRouter = require('express').Router();
 
-publicacaoRouter.post('/api/publicacao', publicacaoController.createpublicacao);
+/* publicacaoRouter.post('/api/publicacao', publicacaoController.createpublicacao);
 
-publicacaoRouter.get('/api/publicacao/:publicacaoID', publicacaoController.getpublicacao);
+publicacaoRouter.get('/api/publicacao/:publicacaoID', publicacaoController.getpublicacao); */
 
 module.exports = publicacaoRouter;
