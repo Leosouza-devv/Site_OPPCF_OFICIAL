@@ -33,10 +33,11 @@
 <body>
     <!-- (INICIO)Cabeçalho do site-->
     <header class="cabecalho">
+
         <div class="conteudo_cabecalho">
             <!--(INICIO) Logo do cabeçalho -->
             <div class="logo">
-                <a href="index.html" aria-label="Voltar para a página inicial">
+                <a href="/" aria-label="Voltar para a página inicial">
                     <img src="assets/imagens/Logo.svg" alt="Imagem da logo do Grupo de Pesquisa">
                     <h3>OPPDS</h3>
                 </a>
@@ -46,12 +47,16 @@
             <!--(INICIO) links de navegação do site pelo computador -->
             <nav class="navegacao_desktop">
                 <ul class="desk_div">
-                    <li class="desk_a"><a href="index.html"> <img src="assets/imagens/home (1) 1.svg"></img><span>Início</span></a></li>
-                    <li class="desk_a"> <a href="paginas/LinhasDePesquisa_Geral.html"> <img src="assets/imagens/LinhaDePesquisa.svg">
+                    <li class="desk_a"><a href="/"> <img src="assets/imagens/home (1) 1.svg"></img><span>Início</span></a></li>
+                    <li class="desk_a"> <a href="/linhas"> <img src="assets/imagens/LinhaDePesquisa.svg">
                             <Span>Linhas de pesquisa</Span> </a></li>
-                    <li class="desk_a"><a href="paginas/Eventos.html"><img src="assets/imagens/Eventos.svg"><span>Eventos</span></a>
+                    <li class="desk_a"><a href="/eventos"><img src="assets/imagens/Eventos.svg"><span>Eventos</span></a>
                     </li>
+
                 </ul>
+
+
+
             </nav>
             <div class="usuario-area" data-user-root>
                 <a class="usuario-acesso" data-user-access href="cadastro.html?tab=cadastro">Criar conta</a>
@@ -66,12 +71,16 @@
             </div>
             <!--(FIM) links de navegação do site pelo computador -->
 
+
             <!--(INICIO) menu hamburguer para celular -->
             <input type="checkbox" id="menu-check">
             <label class="lebel_hamburguer" for="menu-check">
                 <div id="abrir" onclick="menu();"></div>
             </label>
             <!--(FIM) menu hamburguer para celular -->
+
+            <!--(INICIO) tema escuro ou claro do site -->
+            <!--(FIM) tema escuro ou claro do site -->
         </div>
     </header>
 
@@ -79,11 +88,11 @@
     <nav class="menu_mobile">
         <div class="mob_a">
             <ul class="desk_div">
-                <li class="desk_a" style="--a_mobile1: 3;"><a href="index.html"> <img
+                <li class="desk_a" style="--a_mobile1: 3;"><a href="/"> <img
                             src="assets/imagens/home (1) 1.svg"></img><span>Início</span></a></li>
-                <li class="desk_a" style="--a_mobile1: 2.5;"> <a href="paginas/LinhasDePesquisa_Geral.html"> <img
+                <li class="desk_a" style="--a_mobile1: 2.5;"> <a href="/linhas"> <img
                             src="assets/imagens/LinhaDePesquisa.svg"> <Span>Linhas de pesquisa</Span> </a></li>
-                <li class="desk_a" style="--a_mobile1: 2;"><a href="paginas/Eventos.html"><img
+                <li class="desk_a" style="--a_mobile1: 2;"><a href="/eventos"><img
                             src="assets/imagens/Eventos.svg"><span>Eventos</span></a></li>
             </ul>
         </div>
@@ -105,7 +114,7 @@
             </div>
             <div class="CaminhoPercorrido">
                 <p>
-                    <a href="index.html">Início</a>
+                    <a href="/">Início</a>
                     <span aria-current="page">Cadastro</span>
                 </p>
             </div>
@@ -238,8 +247,8 @@
 
             <div class="rodapeSuporte">
                 <h3>Suporte</h3>
-                <a href="paginas/PoliticasDePrivacidade.html">Políticas de Privacidade</a>
-                <a href="paginas/TermoDeUsoEticoDaIA.html">Termo de uso ético de Inteligência Artificial - IA</a>
+                <a href="/legal/privacidade">Políticas de Privacidade</a>
+                <a href="/legal/ia">Termo de uso ético de Inteligência Artificial - IA</a>
                 <a href="https://mail.google.com/mail/?view=cm&fs=1&to=geografia.cepf@ifrj.edu.br" target="_blank" rel="noopener noreferrer">Fale conosco</a>
             </div>
 

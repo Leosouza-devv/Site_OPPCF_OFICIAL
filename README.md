@@ -1,5 +1,18 @@
-﻿# Site OPPCF
+# Documentação site OPPCF
+Site oficial do Observatório de Políticas Públicas do Centro-Sul Fluminense
 
-Este repositório contém o site em HTML, CSS, JavaScript e imagens locais. Não é necessário instalar dependências nem executar um servidor Node.js.
+## Ferramentas
+- HTML + CSS + JS -> frontend
+- NodeJS + Express -> backend
+- MySQL -> banco de dados
+- Dotenv -> Variáveis
+- Pug -> Templates
 
-Para publicar, envie o conteúdo de `public/static/` para a raiz do serviço de hospedagem estática. Para visualizar localmente, abra `public/static/index.html` no navegador ou sirva essa pasta com qualquer servidor HTTP estático.
+## Como testar
+Para instalar os pacotes de package.json:
+> npm install
+
+Para iniciar o express:
+> node app.cjs
+
+Com o express em funcionamento, abrir o localhost com o PORT indicado em .env, ou 3000.

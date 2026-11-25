@@ -1,0 +1,46 @@
+const path = require('path');
+const db = require(path.resolve(__dirname + '/../database/db.cjs'));
+const { 
+    createPublicacao: createPublicacao,
+    getPublicacaoByID: getPublicacaoByID
+} = require(path.resolve(__dirname + '/../database/queries.cjs'));
+
+
+class Publicacao {
+    // (tipo, titulo, autores, resumo, abstract, pdf_path, id_linhas)
+    constructor(tipo, titulo, autores, resumo, abstract, pdf_path, id_linhas) {
+        this.tipo = tipo;
+        this.titulo = titulo;
+        this.autores = autores;
+        this.resumo = resumo;
+        this.abstract = abstract;
+        this.pdf_path = pdf_path;
+        this.id_linhas = id_linhas;
+    }
+
+    static create(newPublicacao) {
+        return new Promise((resolve, reject) => {
+            db.pool.query(createPublicacao, 
+                [newPublicacao.tipo, newPublicacao.titulo, newPublicacao.autores, newPublicacao.resumo, newPublicacao.abstract, newPublicacao.pdf_path, newPublicacao.id_linha],
+                (err, results) => {
+                    if (err) return reject(err);
+                    resolve(results);
+                }
+            );
+        });
+    }
+
+    static getByID(id_Publicacoes) {
+        return new Promise((resolve, reject) => {
+            db.pool.query(getPublicacaoByID, 
+                [id_Publicacoes], 
+                (err, results) => {
+                    if (err) return reject(err);
+                    resolve(results);
+                }
+            );
+        });
+    }
+}
+
+module.exports = Publicacao;
