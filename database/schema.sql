@@ -11,7 +11,7 @@ CREATE TABLE IF NOT EXISTS linhas (
     nome VARCHAR(200) NOT NULL,
     resumo VARCHAR(1000),
     pdf_path VARCHAR(200),
-    orientador VARCHAR(100),
+    orientador VARCHAR(1000),
     orientandos VARCHAR(1000),
     objetivos VARCHAR(1000)
 );
